@@ -1,10 +1,9 @@
 {
-	"variants": {
-        "facing=west":  { "model": "omniheads:block/basket_apple", "y": 270 },
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/basket_apple" },
 		"facing=east":  { "model": "omniheads:block/basket_apple", "y": 90 },
-        "facing=south": { "model": "omniheads:block/basket_apple", "y": 180 },
-        "facing=north": { "model": "omniheads:block/basket_apple" },
-        "facing=up": { "model": "omniheads:block/basket_apple" },
-		"facing=down": { "model": "omniheads:block/basket_apple"}
+		"facing=south": { "model": "omniheads:block/basket_apple", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/basket_apple", "y": 270 }
 	}
 }

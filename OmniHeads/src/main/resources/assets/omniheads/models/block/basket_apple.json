@@ -1,11 +1,14 @@
 {
 	"credit": "Made with Blockbench",
-	"textures": {
+	"parent": "block/block",
+	"textures":
+	{
 		"0": "omniheads:block/basket_apple",
 		"1": "block/jungle_planks",
 		"particle": "omniheads:block/basket_apple"
 	},
-	"elements": [
+	"elements":
+	[
 		{
 			"name": "basket ground",
 			"from": [0, 0, 0],

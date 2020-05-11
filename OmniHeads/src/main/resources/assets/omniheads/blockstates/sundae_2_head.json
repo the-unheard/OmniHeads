@@ -1,10 +1,9 @@
 {
-	"variants": {
-        "facing=west":  { "model": "omniheads:block/sundae_2_head", "y": 270 },
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/sundae_2_head" },
 		"facing=east":  { "model": "omniheads:block/sundae_2_head", "y": 90 },
-        "facing=south": { "model": "omniheads:block/sundae_2_head", "y": 180 },
-        "facing=north": { "model": "omniheads:block/sundae_2_head" },
-        "facing=up": { "model": "omniheads:block/sundae_2_head" },
-		"facing=down": { "model": "omniheads:block/sundae_2_head"}
+		"facing=south": { "model": "omniheads:block/sundae_2_head", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/sundae_2_head", "y": 270 }
 	}
 }
