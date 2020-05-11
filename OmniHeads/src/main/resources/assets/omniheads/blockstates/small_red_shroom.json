@@ -1,0 +1,10 @@
+{
+	"variants": {
+        "facing=west":  { "model": "omniheads:block/small_red_shroom", "y": 270 },
+		"facing=east":  { "model": "omniheads:block/small_red_shroom", "y": 90 },
+        "facing=south": { "model": "omniheads:block/small_red_shroom", "y": 180 },
+        "facing=north": { "model": "omniheads:block/small_red_shroom" },
+        "facing=up": { "model": "omniheads:block/small_red_shroom" },
+		"facing=down": { "model": "omniheads:block/small_red_shroom"}
+	}
+}

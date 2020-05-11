@@ -1,0 +1,7 @@
+{
+    "pack": {
+        "description": "OmniHeads",
+        "pack_format": 4,
+        "_comment": "Head items with block behavior."
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"variants": {
+        "facing=west":  { "model": "omniheads:block/computer_head", "y": 270 },
+		"facing=east":  { "model": "omniheads:block/computer_head", "y": 90 },
+        "facing=south": { "model": "omniheads:block/computer_head", "y": 180 },
+        "facing=north": { "model": "omniheads:block/computer_head" },
+        "facing=up": { "model": "omniheads:block/computer_head" },
+		"facing=down": { "model": "omniheads:block/computer_head"}
+	}
+}

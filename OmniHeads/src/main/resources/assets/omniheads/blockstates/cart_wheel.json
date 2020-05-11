@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"facing=north": { "model": "omniheads:block/cart_wheel" },
+		"facing=south": { "model": "omniheads:block/cart_wheel", "y": 180 },
+		"facing=west": { "model": "omniheads:block/cart_wheel", "y": 270 },
+		"facing=east": { "model": "omniheads:block/cart_wheel", "y": 90 },
+		"facing=up": { "model": "omniheads:block/cart_wheel", "x" : -90 },
+		"facing=down": { "model": "omniheads:block/cart_wheel", "x": 90}
+	}
+}
