@@ -1,10 +1,11 @@
 {
-	"variants": {
+	"variants":
+	{
 		"facing=north": { "model": "omniheads:block/cctv" },
+		"facing=east":  { "model": "omniheads:block/cctv", "y": 90 },
 		"facing=south": { "model": "omniheads:block/cctv", "y": 180 },
-		"facing=west": { "model": "omniheads:block/cctv", "y": 270 },
-		"facing=east": { "model": "omniheads:block/cctv", "y": 90 },
-		"facing=up": { "model": "omniheads:block/cctv", "x" : -90 },
-		"facing=down": { "model": "omniheads:block/cctv", "x": 90}
+		"facing=west":  { "model": "omniheads:block/cctv", "y": 270 },
+		"facing=up":    { "model": "omniheads:block/cctv", "x" : -90 },
+		"facing=down":  { "model": "omniheads:block/cctv", "x": 90 }
 	}
 }

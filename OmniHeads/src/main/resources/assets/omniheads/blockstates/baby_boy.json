@@ -1,10 +1,9 @@
 {
-	"variants": {
-        "facing=west":  { "model": "omniheads:block/baby_boy", "y": 270 },
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/baby_boy" },
 		"facing=east":  { "model": "omniheads:block/baby_boy", "y": 90 },
-        "facing=south": { "model": "omniheads:block/baby_boy", "y": 180 },
-        "facing=north": { "model": "omniheads:block/baby_boy" },
-        "facing=up": { "model": "omniheads:block/baby_boy" },
-		"facing=down": { "model": "omniheads:block/baby_boy"}
+		"facing=west":  { "model": "omniheads:block/baby_boy", "y": 270 },
+		"facing=south": { "model": "omniheads:block/baby_boy", "y": 180 }
 	}
 }
