@@ -9,7 +9,7 @@ import net.minecraft.world.IBlockReader;
 
 public class BabyBlock extends HorizontalRotationBlock
 {
-	public static final VoxelShape SHAPE = Block.makeCuboidShape(0d, 0d, 0d, 16d, 9d, 16d);
+	public static final VoxelShape SHAPE = Block.makeCuboidShape(0d, 0d, 4d, 16d, 8d, 12d);
 
 	public BabyBlock(Properties properties)
 	{

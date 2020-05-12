@@ -25,6 +25,15 @@ public final class OmniItems
 			return new ItemStack(Items.PLAYER_HEAD);
 		}
 	};
+	
+	public static final ItemGroup TAB2 = new ItemGroup("others")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.CCTV);
+		}
+	};
 
 	public static List<Item> ITEMS = Lists.newArrayList();
 
