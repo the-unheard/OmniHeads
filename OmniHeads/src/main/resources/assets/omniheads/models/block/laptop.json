@@ -1,7 +1,9 @@
 {
 	"credit": "Made with Blockbench",
+	"parent": "block/block",
 	"textures": {
-		"1": "omniheads:block/laptop"
+		"1": "omniheads:block/laptop",
+		"particle": "omniheads:block/laptop"
 	},
 	"elements": [
 		{

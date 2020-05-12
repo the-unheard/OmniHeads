@@ -1,6 +1,6 @@
 {
-	"itemGroup.omniheads": "OmniHeads",
-	"itemGroup.others": "OmniHeads Misc",
+	"itemGroup.omniheads.main": "OmniHeads",
+	"itemGroup.omniheads.others": "OmniHeads Misc",
 	"block.omniheads.book_1_head": "Book 1",
 	"block.omniheads.book_2_head": "Book 2",
 	"block.omniheads.chest_head": "Chest",

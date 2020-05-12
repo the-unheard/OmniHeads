@@ -17,7 +17,7 @@ public final class OmniItems
 {
 	private OmniItems() {}
 
-	public static final ItemGroup TAB = new ItemGroup(OmniHeads.ID)
+	public static final ItemGroup MAIN_TAB = new ItemGroup(OmniHeads.ID + ".main")
 	{
 		@Override
 		public ItemStack createIcon()
@@ -26,7 +26,7 @@ public final class OmniItems
 		}
 	};
 	
-	public static final ItemGroup TAB2 = new ItemGroup("others")
+	public static final ItemGroup OTHERS_TAB = new ItemGroup(OmniHeads.ID + ".others")
 	{
 		@Override
 		public ItemStack createIcon()

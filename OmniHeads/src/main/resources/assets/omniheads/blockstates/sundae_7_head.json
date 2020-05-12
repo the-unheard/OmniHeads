@@ -1,9 +1,13 @@
 {
 	"variants":
 	{
-		"facing=north": { "model": "omniheads:block/sundae_7_head" },
-		"facing=east":  { "model": "omniheads:block/sundae_7_head", "y": 90 },
-		"facing=south": { "model": "omniheads:block/sundae_7_head", "y": 180 },
-		"facing=west":  { "model": "omniheads:block/sundae_7_head", "y": 270 }
+		"rotation=0": { "model": "omniheads:block/sundae_7_head" },
+		"rotation=1": { "model": "omniheads:block/diagonal_sundae_7_head" },
+		"rotation=2": { "model": "omniheads:block/sundae_7_head", "y": 90 },
+		"rotation=3": { "model": "omniheads:block/diagonal_sundae_7_head", "y": 90 },
+		"rotation=4": { "model": "omniheads:block/sundae_7_head", "y": 180 },
+		"rotation=5": { "model": "omniheads:block/diagonal_sundae_7_head", "y": 180 },
+		"rotation=6": { "model": "omniheads:block/sundae_7_head", "y": 270 },
+		"rotation=7": { "model": "omniheads:block/diagonal_sundae_7_head", "y": 270 }
 	}
 }
