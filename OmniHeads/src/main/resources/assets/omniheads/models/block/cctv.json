@@ -5,7 +5,7 @@
 	{
 		"0": "block/black_concrete",
 		"1": "block/white_concrete",
-		"2": "block/iron_block",
+		"2": "block/white_concrete",
 		"particle": "block/black_concrete"
 	},
 	"elements":

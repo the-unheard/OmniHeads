@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/newspapers_head" },
+		"facing=east":  { "model": "omniheads:block/newspapers_head", "y": 90 },
+		"facing=west":  { "model": "omniheads:block/newspapers_head", "y": 270 },
+		"facing=south": { "model": "omniheads:block/newspapers_head", "y": 180 }
+	}
+}

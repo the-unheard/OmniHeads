@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/baby_boy_2",
+	"display": {
+		"gui": {
+			"rotation": [45, 135, 0],
+			"translation": [0,2,0],
+			"scale": [0.8, 0.8, 0.8]
+		}
+	}
+}
