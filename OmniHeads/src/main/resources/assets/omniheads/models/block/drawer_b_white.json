@@ -1,0 +1,8 @@
+{
+	"parent": "omniheads:block/base/drawer_b",
+	"textures": {
+		"0": "omniheads:block/true_white",
+		"1": "omniheads:block/true_black",
+		"particle": "omniheads:block/true_white"
+	}
+}

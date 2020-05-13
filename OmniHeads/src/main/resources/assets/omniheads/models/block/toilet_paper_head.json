@@ -1,7 +1,0 @@
-{
-	"parent": "omniheads:block/base/head",
-	"textures":
-	{
-		"0": "omniheads:block/toilet_paper_head"
-	}
-}

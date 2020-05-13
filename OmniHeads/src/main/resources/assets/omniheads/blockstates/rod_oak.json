@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/rod_oak" },
+		"facing=east":  { "model": "omniheads:block/rod_oak", "y": 90 },
+		"facing=south": { "model": "omniheads:block/rod_oak", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/rod_oak", "y": 270 }
+	}
+}
