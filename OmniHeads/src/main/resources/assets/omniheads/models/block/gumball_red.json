@@ -1,0 +1,11 @@
+{
+	"parent": "omniheads:block/base/gumball",
+	"textures": {
+		"2": "omniheads:block/gumball",
+		"3": "omniheads:block/true_red",
+		"4": "omniheads:block/true_light_gray",
+		"5": "omniheads:block/true_white",
+		"6": "block/cyan_stained_glass",
+		"particle": "omniheads:block/gumball"
+	}
+}

@@ -13,11 +13,11 @@ import net.minecraft.world.IBlockReader;
 public class LaptopBlock extends HorizontalRotationBlock
 {
 	
-	public static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(5d, 0d, 16d, 15d, 9d, 4d);
-	public static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0d, 2d, 5d, 14d, 12d, 11d);
-	public static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(5d, 2d, 0d, 11d, 12d, 14d);
-	public static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(16d, 2d, 5d, 2d, 12d, 11d);
-
+	public static final VoxelShape NORTH_SHAPE = Block.makeCuboidShape(3d, 0d, 4d, 13d, 8d, 16d);
+	public static final VoxelShape EAST_SHAPE = Block.makeCuboidShape(0d, 0d, 3d, 12d, 8d, 13d);
+	public static final VoxelShape SOUTH_SHAPE = Block.makeCuboidShape(3d, 0d, 0d, 13d, 8d, 12d);
+	public static final VoxelShape WEST_SHAPE = Block.makeCuboidShape(4d, 0d, 3d, 16d, 8d, 13d);
+	
 	public LaptopBlock(Properties props)
 	{
 		super(props);

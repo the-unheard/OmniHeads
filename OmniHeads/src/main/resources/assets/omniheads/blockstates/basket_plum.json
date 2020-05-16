@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/basket_plum" },
+		"facing=east":  { "model": "omniheads:block/basket_plum", "y": 90 },
+		"facing=south": { "model": "omniheads:block/basket_plum", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/basket_plum", "y": 270 }
+	}
+}

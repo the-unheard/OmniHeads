@@ -1,0 +1,13 @@
+{
+	"variants":
+	{
+		"rotation=0": { "model": "omniheads:block/candle_cyan_head" },
+		"rotation=1": { "model": "omniheads:block/diagonal_candle_cyan_head" },
+		"rotation=2": { "model": "omniheads:block/candle_cyan_head", "y": 90 },
+		"rotation=3": { "model": "omniheads:block/diagonal_candle_cyan_head", "y": 90 },
+		"rotation=4": { "model": "omniheads:block/candle_cyan_head", "y": 180 },
+		"rotation=5": { "model": "omniheads:block/diagonal_candle_cyan_head", "y": 180 },
+		"rotation=6": { "model": "omniheads:block/candle_cyan_head", "y": 270 },
+		"rotation=7": { "model": "omniheads:block/diagonal_candle_cyan_head", "y": 270 }
+	}
+}

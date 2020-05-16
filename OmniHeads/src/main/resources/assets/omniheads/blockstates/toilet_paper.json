@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/toilet_paper" },
+		"facing=east":  { "model": "omniheads:block/toilet_paper", "y": 90 },
+		"facing=south": { "model": "omniheads:block/toilet_paper", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/toilet_paper", "y": 270 }
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/billiard",
+	"textures": {
+		"1": "block/yellow_concrete"
+	}
+}

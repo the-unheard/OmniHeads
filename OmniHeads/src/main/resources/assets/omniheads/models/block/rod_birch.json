@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/rod",
+	"textures":
+	{
+		"1": "block/birch_planks"
+	}
+}

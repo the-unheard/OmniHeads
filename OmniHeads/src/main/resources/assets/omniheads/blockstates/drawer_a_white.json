@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/drawer_a_white" },
+		"facing=east":  { "model": "omniheads:block/drawer_a_white", "y": 90 },
+		"facing=south": { "model": "omniheads:block/drawer_a_white", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/drawer_a_white", "y": 270 }
+	}
+}

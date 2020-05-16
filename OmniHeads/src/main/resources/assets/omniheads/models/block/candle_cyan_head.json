@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/head",
+	"textures":
+	{
+		"0": "omniheads:block/candle_cyan_head"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/phone",
+	"display": {
+		"gui": {
+			"rotation": [90, 180, 0],
+			"translation": [0,0,0],
+			"scale": [2, 2, 2]
+		}
+	}
+}
