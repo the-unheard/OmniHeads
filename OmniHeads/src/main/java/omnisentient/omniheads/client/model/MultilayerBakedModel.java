@@ -2,7 +2,7 @@ package omnisentient.omniheads.client.model;
 
 import java.util.List;
 import java.util.Random;
-import java.util.function.BiPredicate;
+import java.util.function.Function;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -24,9 +24,9 @@ import net.minecraftforge.client.model.data.IModelData;
 @OnlyIn(Dist.CLIENT)
 public class MultilayerBakedModel extends BakedModelWrapper
 {
-	public final BiPredicate<ResourceLocation, BlockRenderLayer> filter;
+	public final Function<ResourceLocation, BlockRenderLayer> filter;
 
-	public MultilayerBakedModel(IBakedModel model, BiPredicate<ResourceLocation, BlockRenderLayer> filter)
+	public MultilayerBakedModel(IBakedModel model, Function<ResourceLocation, BlockRenderLayer> filter)
 	{
 		super(model);
 		this.filter = filter;
@@ -50,7 +50,7 @@ public class MultilayerBakedModel extends BakedModelWrapper
 		List<BakedQuad> newQuads = Lists.newArrayList();
 		BlockRenderLayer layer = MinecraftForgeClient.getRenderLayer();
 		for(BakedQuad quad : quads)
-			if(this.filter.test(quad.getSprite().getName(), layer))
+			if(this.filter.apply(quad.getSprite().getName()) == layer)
 				newQuads.add(quad);
 		return newQuads;
 	}
