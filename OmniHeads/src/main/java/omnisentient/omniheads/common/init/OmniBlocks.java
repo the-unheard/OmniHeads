@@ -29,9 +29,11 @@ import omnisentient.omniheads.common.block.LaptopBlock;
 import omnisentient.omniheads.common.block.MailboxBlock;
 import omnisentient.omniheads.common.block.MicrowaveBlock;
 import omnisentient.omniheads.common.block.PhoneBlock;
+import omnisentient.omniheads.common.block.PillowBlock;
 import omnisentient.omniheads.common.block.RodBlock;
 import omnisentient.omniheads.common.block.SandcastleBlock;
 import omnisentient.omniheads.common.block.ShroomBlock;
+import omnisentient.omniheads.common.block.TableCoffeeBlock;
 import omnisentient.omniheads.common.block.ToiletPaperBlock;
 
 public final class OmniBlocks
@@ -127,29 +129,53 @@ public final class OmniBlocks
 		SMALL_RED_SHROOM = add("small_red_shroom", OmniItems.OTHERS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING))),
 		SMALL_BROWN_SHROOM = add("small_brown_shroom", OmniItems.OTHERS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING))),
 		
+		ALARM_CYAN = add("alarm_cyan", OmniItems.OTHERS_TAB, new AlarmBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		ALARM_GRAY = add("alarm_gray", OmniItems.OTHERS_TAB, new AlarmBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		ALARM_WHITE = add("alarm_white", OmniItems.OTHERS_TAB, new AlarmBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
-		BASKET_APPLE = add("basket_apple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		
+		BASKET_GOLDAPPLE = add("basket_goldapple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_GREENAPPLE = add("basket_greenapple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_ORANGE = add("basket_orange", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_PLUM = add("basket_plum", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_REDAPPLE = add("basket_apple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		
 		BOOKSHELF = add("bookshelf", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		BOOKSHELF_HALF = add("bookshelf_half", OmniItems.OTHERS_TAB, new HalfBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		CART_WHEEL = add("cart_wheel", OmniItems.OTHERS_TAB, new CartWheelBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		CCTV = add("cctv", OmniItems.OTHERS_TAB, new CctvBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		
+		CLOCK_CYAN = add("clock_cyan", OmniItems.OTHERS_TAB, new ClockBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		CLOCK_GRAY = add("clock_gray", OmniItems.OTHERS_TAB, new ClockBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		CLOCK_WHITE = add("clock_white", OmniItems.OTHERS_TAB, new ClockBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		
+		DRAWER_A_CYAN = add("drawer_a_cyan", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		DRAWER_A_GRAY = add("drawer_a_gray", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		DRAWER_A_WHITE = add("drawer_a_white", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		
+		DRAWER_B_CYAN = add("drawer_b_cyan", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		DRAWER_B_GRAY = add("drawer_b_gray", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		DRAWER_B_WHITE = add("drawer_b_white", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		
+		GUMBALL_CYAN = add("gumball_cyan", OmniItems.OTHERS_TAB, new GumballBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		GUMBALL_RED = add("gumball_red", OmniItems.OTHERS_TAB, new GumballBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
+		
 		IMAC = add("imac", OmniItems.OTHERS_TAB, new ImacBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		LAPTOP = add("laptop", OmniItems.OTHERS_TAB, new LaptopBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		MAILBOX = add("mailbox", OmniItems.OTHERS_TAB, new MailboxBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		MICROWAVE = add("microwave", OmniItems.OTHERS_TAB, new MicrowaveBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		MICROWAVE_BLACK = add("microwave_black", OmniItems.OTHERS_TAB, new MicrowaveBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
+		
+		FRUIT_GOLDAPPLE = add("fruit_goldapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_GREENAPPLE = add("fruit_greenapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_ORANGE = add("fruit_orange", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_PLUM = add("fruit_plum", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_REDAPPLE = add("fruit_redapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		
 		PHONE = add("phone", OmniItems.OTHERS_TAB, new PhoneBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		
+		PILLOW_CYAN = add("pillow_cyan", OmniItems.OTHERS_TAB, new PillowBlock(Properties.create(Material.IRON).sound(SoundType.CLOTH))),
+		PILLOW_GRAY = add("pillow_gray", OmniItems.OTHERS_TAB, new PillowBlock(Properties.create(Material.IRON).sound(SoundType.CLOTH))),
+		PILLOW_WHITE = add("pillow_white", OmniItems.OTHERS_TAB, new PillowBlock(Properties.create(Material.IRON).sound(SoundType.CLOTH))),
 		
 		ROD_BLACK = add("rod_black", OmniItems.OTHERS_TAB, new RodBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		ROD_WHITE = add("rod_white", OmniItems.OTHERS_TAB, new RodBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
@@ -162,8 +188,9 @@ public final class OmniBlocks
 		ROD_ACACIA = add("rod_acacia", OmniItems.OTHERS_TAB, new RodBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),	
 		ROD_JUNGLE = add("rod_jungle", OmniItems.OTHERS_TAB, new RodBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		
-		
 		SANDCASTLE = add("sandcastle", OmniItems.OTHERS_TAB, new SandcastleBlock(Properties.create(Material.IRON).sound(SoundType.SAND))),
+		
+		TABLE_COFFEE = add("table_coffee", OmniItems.OTHERS_TAB, new TableCoffeeBlock(Properties.create(Material.IRON).sound(SoundType.GLASS))),
 		TOILET_PAPER = add("toilet_paper", OmniItems.OTHERS_TAB, new ToiletPaperBlock(Properties.create(Material.IRON).sound(SoundType.STONE)));
 			
 

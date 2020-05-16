@@ -2,7 +2,9 @@
 	"parent": "omniheads:block/base/drawer_a",
 	"textures": {
 		"0": "block/white_concrete",
-		"1": "block/black_concrete",
+		"2": "block/white_concrete",
+		"3": "block/black_concrete",
+		"4": "block/gray_concrete",
 		"particle": "block/white_concrete"
 	}
 }

@@ -2,7 +2,7 @@
 	"parent": "omniheads:block/drawer_a_white",
 	"display": {
 		"gui": {
-			"rotation": [30, 45, 0],
+			"rotation": [20, 135, 0],
 			"translation": [0, 0, 0],
 			"scale": [0.6, 0.6, 0.6]
 		}

@@ -1,0 +1,8 @@
+{
+	"parent": "omniheads:block/base/pillow",
+	"textures": {
+		"0": "omniheads:block/true_cyan",
+		"1": "omniheads:block/true_cyan_wool",
+		"particle": "omniheads:block/true_cyan"
+	}
+}

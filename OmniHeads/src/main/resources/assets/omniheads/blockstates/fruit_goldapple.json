@@ -1,0 +1,13 @@
+{
+	"variants":
+	{
+		"rotation=0": { "model": "omniheads:block/fruit_goldapple" },
+		"rotation=1": { "model": "omniheads:block/diagonal_fruit_goldapple" },
+		"rotation=2": { "model": "omniheads:block/fruit_goldapple", "y": 90 },
+		"rotation=3": { "model": "omniheads:block/diagonal_fruit_goldapple", "y": 90 },
+		"rotation=4": { "model": "omniheads:block/fruit_goldapple", "y": 180 },
+		"rotation=5": { "model": "omniheads:block/diagonal_fruit_goldapple", "y": 180 },
+		"rotation=6": { "model": "omniheads:block/fruit_goldapple", "y": 270 },
+		"rotation=7": { "model": "omniheads:block/diagonal_fruit_goldapple", "y": 270 }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/basket_goldapple" },
+		"facing=east":  { "model": "omniheads:block/basket_goldapple", "y": 90 },
+		"facing=south": { "model": "omniheads:block/basket_goldapple", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/basket_goldapple", "y": 270 }
+	}
+}

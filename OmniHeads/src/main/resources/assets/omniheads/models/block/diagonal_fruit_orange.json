@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/diagonal_fruit",
+	"textures":
+	{
+		"2": "omniheads:block/fruit_orange"
+	}
+}

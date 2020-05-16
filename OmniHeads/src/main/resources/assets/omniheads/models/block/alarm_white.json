@@ -2,7 +2,6 @@
 	"parent": "omniheads:block/base/alarm",
 	"textures": {
 		"0": "omniheads:block/alarm_white",
-		"1": "omniheads:block/true_white",
 		"particle": "omniheads:block/alarm_white"
 	}
 }
