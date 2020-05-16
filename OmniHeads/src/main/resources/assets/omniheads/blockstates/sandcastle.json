@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/sandcastle" },
+		"facing=east":  { "model": "omniheads:block/sandcastle", "y": 90 },
+		"facing=south": { "model": "omniheads:block/sandcastle", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/sandcastle", "y": 270 }
+	}
+}

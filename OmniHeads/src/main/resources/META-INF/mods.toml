@@ -3,9 +3,9 @@ loaderVersion="[28,)"
 
 [[mods]]
 modId="omniheads"
-version="0.6"
+version="1.7"
 displayName="OmniHeads"
 authors="Omnisentient"
 description='''
-Adds custom heads as blocks instead of entities
+Adds a lot of furnitues
 '''

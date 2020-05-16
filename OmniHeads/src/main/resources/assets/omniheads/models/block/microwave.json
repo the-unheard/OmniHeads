@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/base/microwave",
+	"textures": {
+		"1": "omniheads:block/true_white",
+		"2": "omniheads:block/true_gray",
+		"3": "omniheads:block/microwave",
+		"4": "block/glass",
+		"particle": "block/glass"
+	}
+}

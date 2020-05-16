@@ -33,6 +33,7 @@ public final class OmniItems
 		{
 			return new ItemStack(OmniBlocks.CCTV);
 		}
+		
 	};
 
 	public static List<Item> ITEMS = Lists.newArrayList();
@@ -54,4 +55,6 @@ public final class OmniItems
 		ITEMS.add(item.setRegistryName(item.getBlock().getRegistryName()));
 		return item;
 	}
+
+
 }

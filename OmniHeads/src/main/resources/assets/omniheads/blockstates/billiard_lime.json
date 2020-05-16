@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/billiard_lime" },
+		"facing=east":  { "model": "omniheads:block/billiard_lime", "y": 90 },
+		"facing=south": { "model": "omniheads:block/billiard_lime", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/billiard_lime", "y": 270 }
+	}
+}

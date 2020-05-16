@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/clock_gray" },
+		"facing=east":  { "model": "omniheads:block/clock_gray", "y": 90 },
+		"facing=west":  { "model": "omniheads:block/clock_gray", "y": 270 },
+		"facing=south": { "model": "omniheads:block/clock_gray", "y": 180 }
+	}
+}

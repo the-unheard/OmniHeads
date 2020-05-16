@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/bookshelf_half" },
+		"facing=east":  { "model": "omniheads:block/bookshelf_half", "y": 90 },
+		"facing=south": { "model": "omniheads:block/bookshelf_half", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/bookshelf_half", "y": 270 }
+	}
+}
