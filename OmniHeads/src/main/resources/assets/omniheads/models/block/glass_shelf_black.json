@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/glass_shelf",
+	"textures": {
+		"0": "omniheads:block/pure_black_glass",
+		"particle": "omniheads:block/pure_black_glass"
+	}
+}

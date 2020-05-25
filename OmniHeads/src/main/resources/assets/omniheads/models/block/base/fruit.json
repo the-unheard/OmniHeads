@@ -1,6 +1,10 @@
 {
 	"credit": "Made with BlockBench",
 	"parent": "block/block",
+	"textures":
+	{
+		"particle": "#2"
+	},
 	"elements":
 	[
 		{

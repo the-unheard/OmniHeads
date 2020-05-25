@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/chair_outdoor",
+	"textures": {
+		"0": "block/white_concrete",
+		"2": "block/gray_concrete"
+	}
+}

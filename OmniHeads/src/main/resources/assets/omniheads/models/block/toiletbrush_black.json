@@ -1,0 +1,8 @@
+{
+	"parent": "omniheads:block/base/toiletbrush",
+	"textures": {
+		"4": "block/black_concrete",
+		"5": "block/gray_concrete",
+		"7": "block/white_concrete"
+	}
+}

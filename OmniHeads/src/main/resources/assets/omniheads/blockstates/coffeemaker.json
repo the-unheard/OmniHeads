@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/coffeemaker" },
+		"facing=east":  { "model": "omniheads:block/coffeemaker", "y": 90 },
+		"facing=south": { "model": "omniheads:block/coffeemaker", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/coffeemaker", "y": 270 }
+	}
+}

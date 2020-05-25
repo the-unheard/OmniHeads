@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/blanket_foot_lightgray",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-3, 6.25, 0],
+			"scale": [0.7, 0.7, 0.7]
+		}
+	}
+}

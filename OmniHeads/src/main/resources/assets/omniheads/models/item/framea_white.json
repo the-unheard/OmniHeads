@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/framea_white",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [1.25, 3.75, 0],
+			"scale": [1, 1, 1]
+		}
+	}
+}

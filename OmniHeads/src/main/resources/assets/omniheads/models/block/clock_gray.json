@@ -1,9 +1,9 @@
 {
 	"parent": "omniheads:block/base/clock",
 	"textures": {
-		"1": "omniheads:block/true_white",
-		"2": "omniheads:block/true_gray",
-		"3": "omniheads:block/true_black",
-		"particle": "omniheads:block/true_black"
+		"1": "block/white_concrete",
+		"2": "block/gray_concrete",
+		"3": "block/black_concrete",
+		"particle": "block/gray_concrete"
 	}
 }

@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/asphalt",
+	"textures":
+	{
+		"0": "omniheads:block/asphalt",
+		"1": "omniheads:block/asphalt_lined",
+		"particle": "omniheads:block/asphalt"
+	}
+}

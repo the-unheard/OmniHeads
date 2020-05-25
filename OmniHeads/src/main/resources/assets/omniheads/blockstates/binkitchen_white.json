@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/binkitchen_white" },
+		"facing=east":  { "model": "omniheads:block/binkitchen_white", "y": 90 },
+		"facing=west":  { "model": "omniheads:block/binkitchen_white", "y": 270 },
+		"facing=south": { "model": "omniheads:block/binkitchen_white", "y": 180 }
+	}
+}

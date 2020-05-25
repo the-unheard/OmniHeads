@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/chair_outdoor_black",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-1.25, 1.75, 0],
+			"scale": [0.8, 0.8, 0.8]
+		}
+	}
+}

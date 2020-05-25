@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/bookset_a" },
+		"facing=east": { "model": "omniheads:block/bookset_a", "y": 90 },
+		"facing=south": { "model": "omniheads:block/bookset_a", "y": 180 },
+		"facing=west": { "model": "omniheads:block/bookset_a", "y": 270 }
+	}
+}

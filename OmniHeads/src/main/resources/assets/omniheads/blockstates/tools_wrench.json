@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/tools_wrench" },
+		"facing=east": { "model": "omniheads:block/tools_wrench", "y": 90 },
+		"facing=south": { "model": "omniheads:block/tools_wrench", "y": 180 },
+		"facing=west": { "model": "omniheads:block/tools_wrench", "y": 270 }
+	}
+}

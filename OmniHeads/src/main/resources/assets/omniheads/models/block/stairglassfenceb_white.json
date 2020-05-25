@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/stairglassfenceb",
+	"textures":
+	{
+		"0": "omniheads:block/pure_light_glass",
+		"1": "block/white_concrete",
+		"particle": "omniheads:block/pure_light_glass"
+	}
+}

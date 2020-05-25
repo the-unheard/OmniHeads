@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/glass_shelf_blue" },
+		"facing=east":  { "model": "omniheads:block/glass_shelf_blue", "y": 90 },
+		"facing=south": { "model": "omniheads:block/glass_shelf_blue", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/glass_shelf_blue", "y": 270 }
+	}
+}

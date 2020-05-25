@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/tools_screwdriver" },
+		"facing=east": { "model": "omniheads:block/tools_screwdriver", "y": 90 },
+		"facing=south": { "model": "omniheads:block/tools_screwdriver", "y": 180 },
+		"facing=west": { "model": "omniheads:block/tools_screwdriver", "y": 270 }
+	}
+}

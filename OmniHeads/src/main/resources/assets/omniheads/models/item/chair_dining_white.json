@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/chair_dining_white",
+	"display": {
+		"gui": {
+			"rotation": [35, -35, 0],
+			"translation": [0.5, -0.75,0],
+			"scale": [0.44, 0.44, 0.44]
+		}
+	}
+}

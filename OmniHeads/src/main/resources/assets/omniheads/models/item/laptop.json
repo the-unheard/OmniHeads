@@ -2,9 +2,9 @@
 	"parent": "omniheads:block/laptop",
 	"display": {
 		"gui": {
-			"rotation": [0, 180, 0],
-			"translation": [0,4,0],
-			"scale": [1.2, 1.2, 1.2]
+			"rotation": [35, 135, 0],
+			"translation": [0, 2.25, 0],
+			"scale": [0.8, 0.8, 0.8]
 		}
 	}
 }

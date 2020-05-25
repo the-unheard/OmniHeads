@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/lamp",
+	"textures":
+	{
+		"0": "block/gray_concrete",
+		"1": "omniheads:block/pure_gold_glass",
+		"particle": "block/gray_concrete"
+	}
+}

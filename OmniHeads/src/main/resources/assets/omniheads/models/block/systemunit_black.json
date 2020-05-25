@@ -1,0 +1,13 @@
+{
+	"parent": "omniheads:block/base/systemunit",
+	"textures":
+	{
+		"0": "block/gray_concrete",
+		"1": "block/gray_concrete",
+		"2": "block/red_concrete",
+		"3": "block/light_gray_concrete",
+		"5": "omniheads:block/pure_black_glass",
+		"6": "omniheads:block/true_black",
+		"particle": "block/gray_concrete"
+	}
+}

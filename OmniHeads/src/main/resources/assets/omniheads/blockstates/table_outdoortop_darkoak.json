@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/table_outdoortop_darkoak" },
+		"facing=east":  { "model": "omniheads:block/table_outdoortop_darkoak", "y": 90 },
+		"facing=south": { "model": "omniheads:block/table_outdoortop_darkoak", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/table_outdoortop_darkoak", "y": 270 }
+	}
+}

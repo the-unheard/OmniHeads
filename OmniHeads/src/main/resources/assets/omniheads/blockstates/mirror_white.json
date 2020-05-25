@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/mirror_white" },
+		"facing=east": { "model": "omniheads:block/mirror_white", "y": 90 },
+		"facing=south": { "model": "omniheads:block/mirror_white", "y": 180 },
+		"facing=west": { "model": "omniheads:block/mirror_white", "y": 270 }
+	}
+}

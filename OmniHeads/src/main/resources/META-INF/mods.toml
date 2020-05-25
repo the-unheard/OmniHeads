@@ -3,9 +3,10 @@ loaderVersion="[28,)"
 
 [[mods]]
 modId="omniheads"
-version="1.7"
+version="1.10"
 displayName="OmniHeads"
 authors="Omnisentient"
 description='''
-Adds a lot of furnitues
+Adds head-like blocks to reduce tile entity count
+Adds almost 100 unique blocks, with count of color variation not included
 '''

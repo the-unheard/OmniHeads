@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/wallshelves_a_darkoak" },
+		"facing=east":  { "model": "omniheads:block/wallshelves_a_darkoak", "y": 90 },
+		"facing=south": { "model": "omniheads:block/wallshelves_a_darkoak", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/wallshelves_a_darkoak", "y": 270 }
+	}
+}

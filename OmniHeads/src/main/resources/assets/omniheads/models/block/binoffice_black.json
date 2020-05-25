@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/binoffice",
+	"textures": {
+		"0": "block/gray_concrete",
+		"particle": "block/gray_concrete"
+		}
+}

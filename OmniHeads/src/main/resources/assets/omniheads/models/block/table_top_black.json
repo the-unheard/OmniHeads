@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/table_top",
+	"textures": {
+		"1": "block/gray_concrete"
+	}
+}

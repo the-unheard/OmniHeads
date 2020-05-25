@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/rod",
 	"textures":
 	{
-		"1": "omniheads:block/true_white"
+		"1": "block/white_concrete"
 	}
 }

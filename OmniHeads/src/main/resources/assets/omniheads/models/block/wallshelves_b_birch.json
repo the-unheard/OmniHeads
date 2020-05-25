@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/wallshelves_b",
+	"textures": {
+		"0": "block/birch_planks",
+		"1": "block/gray_concrete",
+		"2": "block/light_gray_concrete",
+		"particle": "block/light_gray_concrete"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/radiator",
+	"textures":
+	{
+		"0": "block/gray_concrete",
+		"1": "omniheads:block/metal_texture",
+		"particle": "block/gray_concrete"
+	}
+}

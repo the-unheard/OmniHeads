@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/blanket_foot",
+	"textures": {
+	"0": "block/lime_wool"
+	}
+}
