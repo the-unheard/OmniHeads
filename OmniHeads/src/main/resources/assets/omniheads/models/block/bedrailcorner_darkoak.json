@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/bedrailcorner",
+	"textures": {
+		"0": "block/dark_oak_planks"
+	}
+}

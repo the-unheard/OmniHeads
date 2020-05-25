@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/tools_robertson",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-7.25, -5, 0],
+			"scale": [1.4, 1.4, 1.4]
+		}
+	}
+}

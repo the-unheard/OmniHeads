@@ -26,12 +26,112 @@ public final class OmniItems
 		}
 	};
 	
-	public static final ItemGroup OTHERS_TAB = new ItemGroup(OmniHeads.ID + ".others")
+	public static final ItemGroup BEDROOM_TAB = new ItemGroup(OmniHeads.ID + ".bedroom")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.PILLOW_GRAY);
+		}
+		
+	};
+	
+	public static final ItemGroup KITCHEN_TAB = new ItemGroup(OmniHeads.ID + ".kitchen")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.MICROWAVE_BLACK);
+		}
+		
+	};
+	
+	public static final ItemGroup BATHROOM_TAB = new ItemGroup(OmniHeads.ID + ".bathroom")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.TOILET_WHITE);
+		}
+		
+	};
+	
+	public static final ItemGroup OFFICE_TAB = new ItemGroup(OmniHeads.ID + ".office")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.IMAC);
+		}
+		
+	};
+	
+	public static final ItemGroup FURNITURE_TAB = new ItemGroup(OmniHeads.ID + ".furniture")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.WALLSHELVES_A_WHITE);
+		}
+		
+	};
+	
+	public static final ItemGroup TABLECHAIR_TAB = new ItemGroup(OmniHeads.ID + ".tablechair")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.IMAC);
+		}
+		
+	};
+	
+	public static final ItemGroup OUTDOOR_TAB = new ItemGroup(OmniHeads.ID + ".outdoor")
 	{
 		@Override
 		public ItemStack createIcon()
 		{
 			return new ItemStack(OmniBlocks.CCTV);
+		}
+		
+	};
+	
+	public static final ItemGroup DECORATION_TAB = new ItemGroup(OmniHeads.ID + ".decoration")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.BOOKSET_A);
+		}
+		
+	};
+	
+	public static final ItemGroup CONSTRUCTION_TAB = new ItemGroup(OmniHeads.ID + ".construction")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.STAIRS_WHITE);
+		}
+		
+	};
+	
+	public static final ItemGroup ROAD_TAB = new ItemGroup(OmniHeads.ID + ".road")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.ASPHALT_BLOCK_LINED);
+		}
+		
+	};
+	
+	public static final ItemGroup OTHERS_TAB = new ItemGroup(OmniHeads.ID + ".others")
+	{
+		@Override
+		public ItemStack createIcon()
+		{
+			return new ItemStack(OmniBlocks.SANDCASTLE_WHITE);
 		}
 		
 	};

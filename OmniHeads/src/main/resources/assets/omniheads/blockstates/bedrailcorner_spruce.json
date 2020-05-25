@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/bedrailcorner_spruce" },
+		"facing=east":  { "model": "omniheads:block/bedrailcorner_spruce", "y": 90 },
+		"facing=south": { "model": "omniheads:block/bedrailcorner_spruce", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/bedrailcorner_spruce", "y": 270 }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/asphalt_slopebot" },
+		"facing=east": { "model": "omniheads:block/asphalt_slopebot", "y": 90 },
+		"facing=south": { "model": "omniheads:block/asphalt_slopebot", "y": 180 },
+		"facing=west": { "model": "omniheads:block/asphalt_slopebot", "y": 270 }
+	}
+}

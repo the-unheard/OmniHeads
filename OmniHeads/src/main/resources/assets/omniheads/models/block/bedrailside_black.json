@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/bedrailside",
+	"textures": {
+		"1": "block/gray_concrete"
+	}
+}

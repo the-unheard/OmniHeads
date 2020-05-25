@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/binkitchen",
+	"textures": {
+		"0": "block/white_concrete",
+		"1": "block/gray_concrete",
+		"2": "block/black_concrete",
+		"particle": "block/white_concrete"
+		}
+}

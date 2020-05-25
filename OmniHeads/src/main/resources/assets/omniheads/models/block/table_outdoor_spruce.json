@@ -1,0 +1,7 @@
+{
+	"parent": "omniheads:block/base/table_outdoor",
+	"textures": {
+		"0": "block/gray_concrete",
+		"1": "block/spruce_planks"
+	}
+}

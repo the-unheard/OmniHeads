@@ -3,9 +3,9 @@
 	"parent": "block/block",
 	"textures": {
 		"0": "block/oak_planks",
-		"2": "omniheads:block/true_gray",
-		"5": "omniheads:block/true_silver",
-		"6": "omniheads:block/true_red",
+		"2": "block/gray_concrete",
+		"5": "block/light_gray_concrete",
+		"6": "block/red_concrete",
 		"particle": "block/oak_planks"
 	},
 	"elements": [

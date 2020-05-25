@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/table_outdoor_oak" },
+		"facing=east":  { "model": "omniheads:block/table_outdoor_oak", "y": 90 },
+		"facing=south": { "model": "omniheads:block/table_outdoor_oak", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/table_outdoor_oak", "y": 270 }
+	}
+}

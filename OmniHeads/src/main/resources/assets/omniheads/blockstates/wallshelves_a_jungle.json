@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/wallshelves_a_jungle" },
+		"facing=east":  { "model": "omniheads:block/wallshelves_a_jungle", "y": 90 },
+		"facing=south": { "model": "omniheads:block/wallshelves_a_jungle", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/wallshelves_a_jungle", "y": 270 }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/bathtub_black" },
+		"facing=east":  { "model": "omniheads:block/bathtub_black", "y": 90 },
+		"facing=west":  { "model": "omniheads:block/bathtub_black", "y": 270 },
+		"facing=south": { "model": "omniheads:block/bathtub_black", "y": 180 }
+	}
+}

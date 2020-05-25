@@ -1,8 +1,6 @@
 {
 	"parent": "omniheads:block/base/pillow",
 	"textures": {
-		"0": "omniheads:block/true_gray",
-		"1": "block/gray_wool",
-		"particle": "omniheads:block/true_gray"
+		"3": "block/gray_concrete"
 	}
 }

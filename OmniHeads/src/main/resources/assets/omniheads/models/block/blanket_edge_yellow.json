@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/blanket_edge",
+	"textures": {
+	"0": "block/yellow_wool"
+	}
+}

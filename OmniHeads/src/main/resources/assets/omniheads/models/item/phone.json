@@ -2,9 +2,9 @@
 	"parent": "omniheads:block/phone",
 	"display": {
 		"gui": {
-			"rotation": [90, 180, 0],
-			"translation": [0,0,0],
-			"scale": [2, 2, 2]
+			"rotation": [35, 135, 0],
+			"translation": [0, 9.5, 0],
+			"scale": [1.5, 1.5, 1.5]
 		}
 	}
 }

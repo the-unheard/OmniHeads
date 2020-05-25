@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/blender",
+	"textures": {
+		"0": "block/gray_concrete",
+		"1": "block/white_concrete",
+		"2": "omniheads:block/pure_blue_glass",
+		"particle": "block/gray_concrete"
+	}
+}

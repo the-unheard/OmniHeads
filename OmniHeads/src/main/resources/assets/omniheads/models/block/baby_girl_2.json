@@ -3,6 +3,7 @@
 	"textures":
 	{
 		"0": "omniheads:block/baby_girl_2",
-		"1": "block/gray_wool"
+		"1": "block/gray_wool",
+		"particle": "block/gray_wool"
 	}
 }

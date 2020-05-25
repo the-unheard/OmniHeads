@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/tv_part" },
+		"facing=east": { "model": "omniheads:block/tv_part", "y": 90 },
+		"facing=south": { "model": "omniheads:block/tv_part", "y": 180 },
+		"facing=west": { "model": "omniheads:block/tv_part", "y": 270 }
+	}
+}

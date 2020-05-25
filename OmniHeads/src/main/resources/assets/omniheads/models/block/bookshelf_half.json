@@ -3,7 +3,7 @@
 	"parent": "block/block",
 	"textures": {
 		"0": "block/bookshelf",
-		"1": "omniheads:block/true_white",
+		"1": "block/white_concrete",
 		"2": "block/oak_planks",
 		"particle": "block/bookshelf"
 	},

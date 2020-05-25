@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/chair_outdoor_jungle" },
+		"facing=east":  { "model": "omniheads:block/chair_outdoor_jungle", "y": 90 },
+		"facing=south": { "model": "omniheads:block/chair_outdoor_jungle", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/chair_outdoor_jungle", "y": 270 }
+	}
+}

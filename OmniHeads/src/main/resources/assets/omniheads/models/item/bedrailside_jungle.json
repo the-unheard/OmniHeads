@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/bedrailside_jungle",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [0, 0, 0],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
+}

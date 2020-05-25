@@ -2,9 +2,9 @@
 	"parent": "omniheads:block/table_coffee",
 	"display": {
 		"gui": {
-			"rotation": [18, 135, 0],
-			"translation": [0, 1.25, 0],
-			"scale": [0.52, 0.52, 0.52]
+			"rotation": [35, 135, 0],
+			"translation": [0.5, 1.75, 0],
+			"scale": [0.5, 0.5, 0.5]
 		}
 	}
 }

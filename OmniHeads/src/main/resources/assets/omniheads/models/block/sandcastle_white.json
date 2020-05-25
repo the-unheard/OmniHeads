@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/sandcastle",
+	"textures": {
+		"1": "omniheads:block/white_sand"
+	}
+}

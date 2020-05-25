@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/bedrailcorner",
+	"textures": {
+		"0": "block/acacia_planks"
+	}
+}

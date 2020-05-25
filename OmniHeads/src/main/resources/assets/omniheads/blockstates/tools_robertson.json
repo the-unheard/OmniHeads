@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/tools_robertson" },
+		"facing=east": { "model": "omniheads:block/tools_robertson", "y": 90 },
+		"facing=south": { "model": "omniheads:block/tools_robertson", "y": 180 },
+		"facing=west": { "model": "omniheads:block/tools_robertson", "y": 270 }
+	}
+}

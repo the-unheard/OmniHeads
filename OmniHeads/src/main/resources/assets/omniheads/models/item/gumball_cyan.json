@@ -2,7 +2,7 @@
 	"parent": "omniheads:block/gumball_cyan",
 	"display": {
 		"gui": {
-			"rotation": [0, 0, 0],
+			"rotation": [35, 135, 0],
 			"translation": [0,1.5,0],
 			"scale": [1, 1, 1]
 		}

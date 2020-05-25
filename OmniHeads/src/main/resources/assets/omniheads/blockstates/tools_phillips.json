@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/tools_phillips" },
+		"facing=east": { "model": "omniheads:block/tools_phillips", "y": 90 },
+		"facing=south": { "model": "omniheads:block/tools_phillips", "y": 180 },
+		"facing=west": { "model": "omniheads:block/tools_phillips", "y": 270 }
+	}
+}

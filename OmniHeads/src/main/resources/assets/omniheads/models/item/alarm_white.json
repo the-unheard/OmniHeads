@@ -2,8 +2,8 @@
 	"parent": "omniheads:block/alarm_white",
 	"display": {
 		"gui": {
-			"rotation": [45, 135, 0],
-			"translation": [-1,9,0],
+			"rotation": [35, 135, 0],
+			"translation": [-0.5, 11, 0],
 			"scale": [2, 2, 2]
 		}
 	}

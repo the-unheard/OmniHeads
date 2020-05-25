@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/base/mirror",
+	"textures":
+	{
+		"1": "omniheads:block/metal_texture",
+		"2": "block/white_concrete",
+		"3": "omniheads:block/pure_blue_glass",
+		"particle": "block/white_concrete"
+	}
+}

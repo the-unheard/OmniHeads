@@ -2,6 +2,7 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/bandages_head"
+		"0": "omniheads:block/bandages_head",
+		"particle": "omniheads:block/bandages_head"
 	}
 }
