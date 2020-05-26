@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/phone",
+	"parent": "omniheads:block/phone_open",
 	"display": {
 		"gui": {
 			"rotation": [35, 135, 0],

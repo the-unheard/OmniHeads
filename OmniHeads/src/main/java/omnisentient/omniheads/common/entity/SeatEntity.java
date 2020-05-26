@@ -42,6 +42,7 @@ public class SeatEntity extends Entity
 		super.tick();
 		this.pos.setPos(this);
 		if(this.getPassengers().isEmpty() || this.world.getBlockState(this.pos).getBlock() != this.state.getBlock())
+			this.removePassengers();
 			this.remove();
 	}
 
