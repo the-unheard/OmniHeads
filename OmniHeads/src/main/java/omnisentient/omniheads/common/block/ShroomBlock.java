@@ -9,12 +9,12 @@ import net.minecraft.world.IBlockReader;
 
 public class ShroomBlock extends Block
 {
+	public static final VoxelShape SHAPE = Block.makeCuboidShape(3d, 0d, 3d, 13d, 9d, 13d);
+
 	public ShroomBlock(Properties properties)
 	{
 		super(properties);
 	}
-
-	public static final VoxelShape SHAPE = Block.makeCuboidShape(3d, 0d, 3d, 13d, 9d, 13d);
 
 	@Override
 	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext ctx)

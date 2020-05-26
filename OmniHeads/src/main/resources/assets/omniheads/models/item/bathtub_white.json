@@ -1,7 +1,15 @@
 {
-	"parent": "omniheads:block/bathtub_white",
-	"display": {
-		"gui": {
+	"parent": "omniheads:block/base/bathtub",
+	"textures":
+	{
+		"0": "block/white_concrete",
+		"1": "block/light_gray_concrete",
+		"4": "omniheads:block/pure_blue_glass"
+	},
+	"display":
+	{
+		"gui":
+		{
 			"rotation": [35, 135, 0],
 			"translation": [-2.5,-0.25,0],
 			"scale": [0.45, 0.45, 0.45]

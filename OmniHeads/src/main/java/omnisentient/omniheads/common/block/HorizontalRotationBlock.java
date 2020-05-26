@@ -1,5 +1,9 @@
 package omnisentient.omniheads.common.block;
 
+import java.util.Map;
+
+import com.google.common.collect.Maps;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItemUseContext;
@@ -15,29 +19,51 @@ import net.minecraft.world.IBlockReader;
 
 public class HorizontalRotationBlock extends Block
 {
+	public final Map<Direction, VoxelShape> shapes = Maps.newEnumMap(Direction.class);
 
-	public final VoxelShape northShape, eastShape, southShape, westShape;
-	
-	public HorizontalRotationBlock(Properties props, VoxelShape north_shape)
+	public HorizontalRotationBlock(Properties props, VoxelShape northShape)
 	{
 		super(props);
 		this.setDefaultState(this.stateContainer.getBaseState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH));
-		this.northShape = north_shape;
-		this.eastShape = rotateShape(Direction.NORTH, Direction.EAST, north_shape);
-		this.southShape = rotateShape(Direction.NORTH, Direction.SOUTH, north_shape);
-		this.westShape = rotateShape(Direction.NORTH, Direction.WEST, north_shape);	
+		shapes.put(Direction.NORTH, northShape);
+		shapes.put(Direction.EAST, rotateShape(Direction.NORTH, Direction.EAST, northShape));
+		shapes.put(Direction.SOUTH, rotateShape(Direction.NORTH, Direction.SOUTH, northShape));
+		shapes.put(Direction.WEST, rotateShape(Direction.NORTH, Direction.WEST, northShape));
 	}
-	
+
 	public HorizontalRotationBlock(Properties props)
 	{
 		super(props);
-		this.northShape = this.eastShape = this.southShape = this.westShape = VoxelShapes.fullCube();
+		this.setDefaultState(this.stateContainer.getBaseState().with(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH));
+		shapes.put(Direction.NORTH, VoxelShapes.fullCube());
+		shapes.put(Direction.EAST, VoxelShapes.fullCube());
+		shapes.put(Direction.SOUTH, VoxelShapes.fullCube());
+		shapes.put(Direction.WEST, VoxelShapes.fullCube());
+	}
+
+	public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape)
+	{
+		VoxelShape[] buffer = new VoxelShape[]{ shape, VoxelShapes.empty() };
+		int times = (to.getHorizontalIndex() - from.getHorizontalIndex() + 4) % 4;
+		for (int i = 0; i < times; i++)
+		{
+			buffer[0].forEachBox((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = VoxelShapes.or(buffer[1], VoxelShapes.create(1-maxZ, minY, minX, 1-minZ, maxY, maxX)));
+			buffer[0] = buffer[1];
+			buffer[1] = VoxelShapes.empty();
+		}
+		return buffer[0];
 	}
 
 	@Override
 	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)
 	{
 		builder.add(BlockStateProperties.HORIZONTAL_FACING);
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext ctx)
+	{
+		return this.shapes.getOrDefault(state.get(BlockStateProperties.HORIZONTAL_FACING), VoxelShapes.fullCube());
 	}
 
 	@Override
@@ -50,38 +76,5 @@ public class HorizontalRotationBlock extends Block
 	public BlockRenderLayer getRenderLayer()
 	{
 		return BlockRenderLayer.CUTOUT;
-	}
-	
-	// calculate shapes
-	public static VoxelShape rotateShape(Direction from, Direction to, VoxelShape shape) {
-		VoxelShape[] buffer = new VoxelShape[]{ shape, VoxelShapes.empty() };
-
-		int times = (to.getHorizontalIndex() - from.getHorizontalIndex() + 4) % 4;
-		for (int i = 0; i < times; i++) {
-			buffer[0].forEachBox((minX, minY, minZ, maxX, maxY, maxZ) -> buffer[1] = VoxelShapes.or(buffer[1], VoxelShapes.create(1-maxZ, minY, minX, 1-minZ, maxY, maxX)));
-			buffer[0] = buffer[1];
-			buffer[1] = VoxelShapes.empty();
-		}
-
-		return buffer[0];
-	}
-
-	// set shapes
-	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext ctx)
-	{
-		Direction dir = state.get(BlockStateProperties.HORIZONTAL_FACING);
-		switch(dir)
-		{
-		case NORTH:
-			return this.northShape;
-		case EAST:
-			return this.eastShape;
-		case SOUTH:
-			return this.southShape;
-		case WEST:
-			return this.westShape;
-		default:
-			return VoxelShapes.fullCube();
-		}
 	}
 }
