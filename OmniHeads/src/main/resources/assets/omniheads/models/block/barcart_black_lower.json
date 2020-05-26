@@ -1,11 +1,11 @@
 {
-	"parent": "omniheads:block/base/barcart",
+	"parent": "omniheads:block/base/barcart_lower",
 	"textures":
 	{
 		"1": "omniheads:block/pure_gold_glass",
-		"2": "block/gray_concrete",
+		"2": "block/white_concrete",
 		"3": "block/gray_concrete",
-		"4": "block/white_concrete",
+		"4": "block/gray_concrete",
 		"6": "block/light_gray_concrete",
 		"7": "omniheads:block/metal_texture",
 		"8": "omniheads:block/pure_red_glass",

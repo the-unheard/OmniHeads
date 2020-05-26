@@ -40,10 +40,12 @@ public class SeatEntity extends Entity
 	public void tick()
 	{
 		super.tick();
+		if(this.world.isRemote) return;
 		this.pos.setPos(this);
-		if(this.getPassengers().isEmpty() || this.world.getBlockState(this.pos).getBlock() != this.state.getBlock())
+		if(this.getPassengers().isEmpty() || this.world.getBlockState(this.pos).getBlock() != this.state.getBlock()) {
 			this.removePassengers();
 			this.remove();
+		}
 	}
 
 	@Override

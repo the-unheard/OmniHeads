@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/base/barcart",
+	"parent": "omniheads:block/base/barcart_upper",
 	"textures":
 	{
 		"1": "omniheads:block/pure_gold_glass",

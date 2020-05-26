@@ -35,7 +35,7 @@ public final class OmniBlocks
 	// VoxelShapes
 	private static VoxelShape alarmShape = Block.makeCuboidShape(5d, 0d, 7d, 11d, 2d, 10d);
 	private static VoxelShape babyShape = Block.makeCuboidShape(4d, 0d, 0d, 12d, 8d, 16d);
-	private static VoxelShape barcartShape = VoxelShapes.or(Block.makeCuboidShape(0d, 3d, 2d, 16d, 5d, 16d), Block.makeCuboidShape(0d, 15d, 2d, 16d, 16d, 16d));
+	private static VoxelShape barcartShape = VoxelShapes.or(Block.makeCuboidShape(0.75d, 2.75d, 0d, 15.25d, 5d, 13d), Block.makeCuboidShape(0.75d, 14.75d, 0d, 15.25d, 17d, 13d));
 	private static VoxelShape bathtubShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 14d, 16d, 11.75d, 16d), Block.makeCuboidShape(0d, 0d, 0d, 2d, 11.75d, 16d), Block.makeCuboidShape(14d, 0d, 0d, 16d, 11.75d, 16d));
 	private static VoxelShape bedrailsideShape = Block.makeCuboidShape(0d, 0d, 8d, 16d, 8d, 16d);
 	private static VoxelShape bedrailcornerShape = Block.makeCuboidShape(0d, 0d, 8d, 8d, 8d, 16d);
@@ -226,8 +226,8 @@ public final class OmniBlocks
 
 		// KITCHEN
 		
-		BARCART_BLACK = add("barcart_black", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), barcartShape)),
-		BARCART_WHITE = add("barcart_white", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), barcartShape)),
+		BARCART_BLACK = add("barcart_black", OmniItems.KITCHEN_TAB, new DoubleHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), barcartShape)),
+		BARCART_WHITE = add("barcart_white", OmniItems.KITCHEN_TAB, new DoubleHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), barcartShape)),
 		BINKITCHEN_BLACK = add("binkitchen_black", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binkitchenShape)),
 		BINKITCHEN_WHITE = add("binkitchen_white", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binkitchenShape)),
 		COFFEE_MAKER = add("coffeemaker", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(4.5d, 0d, 3d, 11.5d, 10.75d, 13d))),
