@@ -11,9 +11,11 @@ import com.google.common.collect.Lists;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.renderer.BlockModelShapes;
+import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ModelResourceLocation;
 import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.ModelBakeEvent;
@@ -22,8 +24,9 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import omnisentient.omniheads.OmniHeads;
-import omnisentient.omniheads.client.event.render.EmptyRenderer;
+import omnisentient.omniheads.client.model.BrightnessBakedModel;
 import omnisentient.omniheads.client.model.MultilayerBakedModel;
+import omnisentient.omniheads.client.render.EmptyRenderer;
 import omnisentient.omniheads.common.entity.SeatEntity;
 import omnisentient.omniheads.common.init.OmniBlocks;
 
@@ -36,7 +39,7 @@ public class OmniClientModEvents
 	public static void onClientSetup(FMLClientSetupEvent event)
 	{
 		RenderingRegistry.registerEntityRenderingHandler(SeatEntity.class, EmptyRenderer::new);
-		Function<ResourceLocation, BlockRenderLayer> selector = tex -> tex.getPath().contains("glass") ? BlockRenderLayer.TRANSLUCENT : BlockRenderLayer.SOLID;
+		Function<BakedQuad, BlockRenderLayer> selector = quad -> quad.getSprite().getName().getPath().contains("glass") ? BlockRenderLayer.TRANSLUCENT : BlockRenderLayer.SOLID;
 		addBlockOverride(OmniBlocks.BARCART_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.BARCART_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.BATHTUB_BLACK, model -> new MultilayerBakedModel(model, selector));
@@ -73,6 +76,8 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.TV_PART, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_STAND, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_WALL, model -> new MultilayerBakedModel(model, selector));
+
+		addFullOverride(OmniBlocks.LAPTOP, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 	}
 
 	@SubscribeEvent
@@ -91,5 +96,16 @@ public class OmniClientModEvents
 	{
 		for(BlockState state : block.getStateContainer().getValidStates())
 			MODEL_OVERRIDES.add(Pair.of(BlockModelShapes.getModelLocation(state), wrap));
+	}
+
+	public static void addItemOverride(IItemProvider item, Function<IBakedModel, IBakedModel> wrap)
+	{
+		MODEL_OVERRIDES.add(Pair.of(new ModelResourceLocation(item.asItem().getRegistryName(), "inventory"), wrap));
+	}
+
+	public static void addFullOverride(Block block, Function<IBakedModel, IBakedModel> wrap)
+	{
+		addBlockOverride(block, wrap);
+		addItemOverride(block, wrap);
 	}
 }

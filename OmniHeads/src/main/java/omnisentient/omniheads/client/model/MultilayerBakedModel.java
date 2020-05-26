@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -24,9 +23,9 @@ import net.minecraftforge.client.model.data.IModelData;
 @OnlyIn(Dist.CLIENT)
 public class MultilayerBakedModel extends BakedModelWrapper
 {
-	public final Function<ResourceLocation, BlockRenderLayer> filter;
+	public final Function<BakedQuad, BlockRenderLayer> filter;
 
-	public MultilayerBakedModel(IBakedModel model, Function<ResourceLocation, BlockRenderLayer> filter)
+	public MultilayerBakedModel(IBakedModel model, Function<BakedQuad, BlockRenderLayer> filter)
 	{
 		super(model);
 		this.filter = filter;
@@ -50,7 +49,7 @@ public class MultilayerBakedModel extends BakedModelWrapper
 		List<BakedQuad> newQuads = Lists.newArrayList();
 		BlockRenderLayer layer = MinecraftForgeClient.getRenderLayer();
 		for(BakedQuad quad : quads)
-			if(this.filter.apply(quad.getSprite().getName()) == layer)
+			if(this.filter.apply(quad) == layer)
 				newQuads.add(quad);
 		return newQuads;
 	}
