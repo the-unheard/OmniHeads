@@ -11,6 +11,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraftforge.event.RegistryEvent;
@@ -18,6 +19,7 @@ import omnisentient.omniheads.OmniHeads;
 import omnisentient.omniheads.common.block.CartWheelBlock;
 import omnisentient.omniheads.common.block.CctvBlock;
 import omnisentient.omniheads.common.block.DoubleHRBlock;
+import omnisentient.omniheads.common.block.DoubleSeatBlock;
 import omnisentient.omniheads.common.block.HeadRotationBlock;
 import omnisentient.omniheads.common.block.HorizontalRotationBlock;
 import omnisentient.omniheads.common.block.SeatBlock;
@@ -33,7 +35,7 @@ public final class OmniBlocks
 	private static VoxelShape alarmShape = Block.makeCuboidShape(5d, 0d, 7d, 11d, 2d, 10d);
 	private static VoxelShape babyShape = Block.makeCuboidShape(4d, 0d, 0d, 12d, 8d, 16d);
 	private static VoxelShape barcartShape = VoxelShapes.or(Block.makeCuboidShape(0d, 3d, 2d, 16d, 5d, 16d), Block.makeCuboidShape(0d, 15d, 2d, 16d, 16d, 16d));
-	private static VoxelShape bathtubShape = VoxelShapes.or(Block.makeCuboidShape(0d, 4d, 0d, 16d, 11.75d, 2d), Block.makeCuboidShape(13.25d, 4d, 2d, 16d, 11.75d, 16d));
+	private static VoxelShape bathtubShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 14d, 16d, 11.75d, 16d), Block.makeCuboidShape(0d, 0d, 0d, 2d, 11.75d, 16d), Block.makeCuboidShape(14d, 0d, 0d, 16d, 11.75d, 16d));
 	private static VoxelShape bedrailsideShape = Block.makeCuboidShape(0d, 0d, 8d, 16d, 8d, 16d);
 	private static VoxelShape bedrailcornerShape = Block.makeCuboidShape(0d, 0d, 8d, 8d, 8d, 16d);
 	private static VoxelShape billiardShape = Block.makeCuboidShape(6d, 0d, 6d, 10d, 4d, 10d);
@@ -239,7 +241,7 @@ public final class OmniBlocks
 		// BATHROOM
 		
 		BATHTUB_BLACK = add("bathtub_black", OmniItems.BATHROOM_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
-		BATHTUB_WHITE = add("bathtub_white", OmniItems.BATHROOM_TAB, new DoubleHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
+		BATHTUB_WHITE = add("bathtub_white", OmniItems.BATHROOM_TAB, new DoubleSeatBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
 		BINBATHROOM_BLACK = add("binbathroom_black", OmniItems.BATHROOM_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binbathroomShape)),
 		BINBATHROOM_WHITE = add("binbathroom_white", OmniItems.BATHROOM_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binbathroomShape)),
 		MIRROR_BLACK = add("mirror_black", OmniItems.BATHROOM_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
@@ -317,7 +319,7 @@ public final class OmniBlocks
 
 		// TABLES CHAIRS
 		
-		CHAIR_DINING_GRAY = add("chair_dining_gray", OmniItems.TABLECHAIR_TAB, new SeatBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape)),
+		CHAIR_DINING_GRAY = add("chair_dining_gray", OmniItems.TABLECHAIR_TAB, new SeatBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape, new Vec3d(0.5d, 0.1d, 0.5d))),
 		CHAIR_DINING_WHITE = add("chair_dining_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape)),
 		CHAIR_DRESSING_BLACK = add("chair_dressing_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdressingShape)),
 		CHAIR_DRESSING_WHITE = add("chair_dressing_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdressingShape)),

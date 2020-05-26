@@ -5,20 +5,25 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.World;
 import omnisentient.omniheads.common.entity.SeatEntity;
 
 public class SeatBlock extends HorizontalRotationBlock
 {
-	public SeatBlock(Properties props, VoxelShape northShape)
+	public final Vec3d shift;
+	 
+	public SeatBlock(Properties props, VoxelShape northShape, Vec3d shift)
 	{
 		super(props, northShape);
+		this.shift = shift;
 	}
 
 	public SeatBlock(Properties props)
 	{
 		super(props);
+		this.shift = new Vec3d(0.5d, 0.5d, 0.5d);
 	}
 
 	@Override
@@ -28,7 +33,7 @@ public class SeatBlock extends HorizontalRotationBlock
 		{
 			if(world.isRemote)
 				return true;
-			SeatEntity seat = new SeatEntity(world, pos.getX() + 0.5d, pos.getY() + 0.5d, pos.getZ() + 0.5d);
+			SeatEntity seat = new SeatEntity(world, pos.getX() + this.shift.x, pos.getY() + this.shift.y, pos.getZ() + this.shift.z);
 			world.addEntity(seat);
 			player.startRiding(seat, true);
 			return true;
