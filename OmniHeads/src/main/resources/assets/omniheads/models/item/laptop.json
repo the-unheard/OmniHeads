@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/laptop",
+	"parent": "omniheads:block/laptop_open",
 	"display": {
 		"gui": {
 			"rotation": [35, 135, 0],

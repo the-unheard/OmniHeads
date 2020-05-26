@@ -11,16 +11,18 @@ import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraftforge.event.RegistryEvent;
 import omnisentient.omniheads.OmniHeads;
 import omnisentient.omniheads.common.block.CartWheelBlock;
 import omnisentient.omniheads.common.block.CctvBlock;
+import omnisentient.omniheads.common.block.DoubleHRBlock;
 import omnisentient.omniheads.common.block.HeadRotationBlock;
 import omnisentient.omniheads.common.block.HorizontalRotationBlock;
+import omnisentient.omniheads.common.block.SeatBlock;
 import omnisentient.omniheads.common.block.ShroomBlock;
+import omnisentient.omniheads.common.block.ToggleableHRBlock;
 import omnisentient.omniheads.common.block.TranslucentHRBlock;
 
 public final class OmniBlocks
@@ -69,9 +71,9 @@ public final class OmniBlocks
 	private static VoxelShape toolsShape = Block.makeCuboidShape(0d, 0d, 15d, 16d, 16d, 16d);
 		
 
-	public static final List<Block> BLOCKS = Lists.newArrayList();
+	public static final List<Block> BLOCKS = Lists.newArrayList(); 
 
-	public static final Block
+	public static final Block 
 	
 		// HEADS
 	
@@ -234,10 +236,10 @@ public final class OmniBlocks
 		MICROWAVE_BLACK = add("microwave_black", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), microwaveShape)),
 		TOASTER = add("toaster", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(5.25d, 0d, 6.5d, 10.75d, 4d, 9.5d))),
 	
-		// BATHROOM		
+		// BATHROOM
 		
 		BATHTUB_BLACK = add("bathtub_black", OmniItems.BATHROOM_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
-		BATHTUB_WHITE = add("bathtub_white", OmniItems.BATHROOM_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
+		BATHTUB_WHITE = add("bathtub_white", OmniItems.BATHROOM_TAB, new DoubleHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), bathtubShape)),
 		BINBATHROOM_BLACK = add("binbathroom_black", OmniItems.BATHROOM_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binbathroomShape)),
 		BINBATHROOM_WHITE = add("binbathroom_white", OmniItems.BATHROOM_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binbathroomShape)),
 		MIRROR_BLACK = add("mirror_black", OmniItems.BATHROOM_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
@@ -253,7 +255,7 @@ public final class OmniBlocks
 		BINOFFICE_BLACK = add("binoffice_black", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binofficeShape)),
 		BINOFFICE_WHITE = add("binoffice_white", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), binofficeShape)),	
 		IMAC = add("imac", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(0d, 0d, 4d, 16d, 15d, 16d))),
-		LAPTOP = add("laptop", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(3d, 0d, 4d, 13d, 8d, 16d))),
+		LAPTOP = add("laptop", OmniItems.OFFICE_TAB, new ToggleableHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(3d, 0d, 4d, 13d, 8d, 16d))),
 		OFFICETRAY_BLACK = add("officetray_black", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetrayShape)),
 		OFFICETRAY_WHITE = add("officetray_white", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetrayShape)),
 		PHONE = add("phone", OmniItems.OFFICE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(6d, 0d, 5d, 10d, 1d, 11d))),
@@ -315,7 +317,7 @@ public final class OmniBlocks
 
 		// TABLES CHAIRS
 		
-		CHAIR_DINING_GRAY = add("chair_dining_gray", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape)),
+		CHAIR_DINING_GRAY = add("chair_dining_gray", OmniItems.TABLECHAIR_TAB, new SeatBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape)),
 		CHAIR_DINING_WHITE = add("chair_dining_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdiningShape)),
 		CHAIR_DRESSING_BLACK = add("chair_dressing_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdressingShape)),
 		CHAIR_DRESSING_WHITE = add("chair_dressing_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), chairdressingShape)),
@@ -464,8 +466,8 @@ public final class OmniBlocks
 
 	public static Block add(String name, ItemGroup group, Block block)
 	{
-		BLOCKS.add(block.setRegistryName(new ResourceLocation(OmniHeads.ID, name)));
-		OmniItems.add(new BlockItem(block, new Item.Properties().group(group)));
+		BLOCKS.add(block.setRegistryName(OmniHeads.ID, name));
+		OmniItems.add(name, new BlockItem(block, new Item.Properties().group(group)));
 		return block;
 	}
 }
