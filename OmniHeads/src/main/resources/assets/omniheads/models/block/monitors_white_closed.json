@@ -1,0 +1,11 @@
+{
+	"parent": "omniheads:block/base/monitors_closed",
+	"textures":
+	{
+		"0": "block/black_concrete",
+		"1": "block/gray_concrete",
+		"2": "omniheads:block/true_white",
+		"4": "block/light_gray_concrete",
+		"particle": "block/black_concrete"
+	}
+}

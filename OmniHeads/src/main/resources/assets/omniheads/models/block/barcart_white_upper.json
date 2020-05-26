@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/base/barcart",
+	"parent": "omniheads:block/base/barcart_upper",
 	"textures":
 	{
 		"1": "omniheads:block/pure_gold_glass",
@@ -11,12 +11,5 @@
 		"8": "omniheads:block/pure_red_glass",
 		"9": "omniheads:block/pure_light_glass",
 		"particle": "omniheads:block/pure_black_glass"
-	},
-	"display": {
-		"gui": {
-			"rotation": [35, 135, 0],
-			"translation": [-2.25, -2, 0],
-			"scale": [0.4, 0.4, 0.4]
-		}
 	}
 }

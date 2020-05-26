@@ -17,7 +17,7 @@ public final class OmniEntityTypes
 	public static final List<EntityType> ENTITY_TYPES = Lists.newArrayList();
 
 	public static final EntityType
-		SEAT = add("seat", EntityType.Builder.create(SeatEntity::new, EntityClassification.MISC).size(0.1f, 0.1f).disableSerialization().disableSummoning().setShouldReceiveVelocityUpdates(false).setUpdateInterval(20).setTrackingRange(32));
+		SEAT = add("seat", EntityType.Builder.create(SeatEntity::new, EntityClassification.MISC).size(0.1f, 0.1f).disableSummoning().setShouldReceiveVelocityUpdates(false).setUpdateInterval(20).setTrackingRange(32));
 
 	public static void register(RegistryEvent.Register<EntityType<?>> event)
 	{

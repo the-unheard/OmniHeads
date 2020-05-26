@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/monitors_white",
+	"parent": "omniheads:block/monitors_white_open",
 	"display": {
 		"gui": {
 			"rotation": [35, 135, 0],

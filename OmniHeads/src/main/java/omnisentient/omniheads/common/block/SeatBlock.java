@@ -33,7 +33,7 @@ public class SeatBlock extends HorizontalRotationBlock
 		{
 			if(world.isRemote)
 				return true;
-			SeatEntity seat = new SeatEntity(world, pos.getX() + this.shift.x, pos.getY() + this.shift.y, pos.getZ() + this.shift.z);
+			SeatEntity seat = new SeatEntity(world, pos.getX() + this.shift.x, pos.getY() + this.shift.y, pos.getZ() + this.shift.z); //???
 			world.addEntity(seat);
 			player.startRiding(seat, true);
 			return true;

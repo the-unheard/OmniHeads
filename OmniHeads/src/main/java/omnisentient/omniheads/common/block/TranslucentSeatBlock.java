@@ -10,17 +10,17 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.World;
 import omnisentient.omniheads.common.entity.SeatEntity;
 
-public class DoubleSeatBlock extends DoubleHRBlock
+public class TranslucentSeatBlock extends TranslucentHRBlock
 {
 	public final Vec3d shift;
 	 
-	public DoubleSeatBlock(Properties props, VoxelShape northShape, Vec3d shift)
+	public TranslucentSeatBlock(Properties props, VoxelShape northShape, Vec3d shift)
 	{
 		super(props, northShape);
 		this.shift = shift;
 	}
 
-	public DoubleSeatBlock(Properties props)
+	public TranslucentSeatBlock(Properties props)
 	{
 		super(props);
 		this.shift = new Vec3d(0.5d, 0.5d, 0.5d);

@@ -1,5 +1,5 @@
 {
-	"parent": "omniheads:block/monitors_black",
+	"parent": "omniheads:block/monitors_black_open",
 	"display": {
 		"gui": {
 			"rotation": [35, 135, 0],
