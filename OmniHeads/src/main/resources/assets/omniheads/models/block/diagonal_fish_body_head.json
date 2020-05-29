@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/diagonal_head",
 	"textures":
 	{
-		"0": "omniheads:block/fish_body_head"
+		"0": "omniheads:block/head/fish_body_head"
 	}
 }

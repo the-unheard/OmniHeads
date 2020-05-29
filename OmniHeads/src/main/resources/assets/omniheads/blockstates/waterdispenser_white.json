@@ -1,0 +1,13 @@
+{
+	"variants":
+	{
+		"facing=north,half=lower": { "model": "omniheads:block/waterdispenser_white_lower", "y": 180  },
+		"facing=east,half=lower":  { "model": "omniheads:block/waterdispenser_white_lower", "y": 270 },
+		"facing=west,half=lower":  { "model": "omniheads:block/waterdispenser_white_lower", "y": 90 },
+		"facing=south,half=lower": { "model": "omniheads:block/waterdispenser_white_lower"},
+		"facing=north,half=upper": { "model": "omniheads:block/waterdispenser_white_upper", "y": 180  },
+		"facing=east,half=upper":  { "model": "omniheads:block/waterdispenser_white_upper", "y": 270 },
+		"facing=west,half=upper":  { "model": "omniheads:block/waterdispenser_white_upper", "y": 90 },
+		"facing=south,half=upper": { "model": "omniheads:block/waterdispenser_white_upper"}
+	}
+}

@@ -1,6 +1,6 @@
 {
 	"parent": "omniheads:block/base/table_outdoortop",
 	"textures": {
-		"1": "block/acacia_planks"
+		"2": "block/acacia_planks"
 	}
 }

@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/tissue_head"
+		"0": "omniheads:block/head/tissue_head"
 	}
 }

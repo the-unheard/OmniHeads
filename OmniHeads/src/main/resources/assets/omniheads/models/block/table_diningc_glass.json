@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/table_diningc",
+	"textures": {
+		"1": "omniheads:block/pure_darkblack_glass",
+		"2": "block/gray_concrete",
+		"3": "omniheads:block/ledglass_gold",
+		"particle": "block/gray_concrete"
+	}
+}

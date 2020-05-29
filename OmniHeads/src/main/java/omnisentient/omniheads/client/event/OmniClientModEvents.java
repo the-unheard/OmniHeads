@@ -68,8 +68,12 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.SYSTEMUNIT_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.SYSTEMUNIT_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TABLE_COFFEE, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.TABLE_DINING_GLASS, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.TABLE_DININGB_GLASS, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TABLE_DININGC_BLACK, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.TABLE_DININGC_GLASS, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TABLE_DININGC_WHITE, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.TABLE_TOP_GLASS, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TOILET_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TOILET_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_BOTTOM, model -> new MultilayerBakedModel(model, selector));
@@ -77,7 +81,21 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.TV_STAND, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_WALL, model -> new MultilayerBakedModel(model, selector));
 
+		addFullOverride(OmniBlocks.ALARM_CYAN, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.ALARM_GRAY, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.ALARM_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.IMAC, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.LAMP_BLACK, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.LAMP_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.LAPTOP, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.MONITORS_BLACK, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.MONITORS_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));	
+		addFullOverride(OmniBlocks.PHONE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.SYSTEMUNIT_BLACK, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.SYSTEMUNIT_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.TABLE_DININGC_BLACK, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.TABLE_DININGC_GLASS, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.TABLE_DININGC_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 	}
 
 	@SubscribeEvent

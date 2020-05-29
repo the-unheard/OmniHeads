@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/lantern1_head"
+		"0": "omniheads:block/head/lantern1_head"
 	}
 }

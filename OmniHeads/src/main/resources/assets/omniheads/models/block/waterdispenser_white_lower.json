@@ -1,0 +1,13 @@
+{
+	"parent": "omniheads:block/base/waterdispenser_lower",
+	"textures":
+	{
+		"0": "block/white_concrete",
+		"1": "block/gray_concrete",
+		"2": "omniheads:block/metal_texture",
+		"3": "block/light_gray_concrete",
+		"4": "block/red_concrete",
+		"5": "block/black_concrete",
+		"particle": "block/white_concrete"
+	}
+}

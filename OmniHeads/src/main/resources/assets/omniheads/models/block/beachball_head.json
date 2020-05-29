@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/beachball_head"
+		"0": "omniheads:block/head/beachball_head"
 	}
 }

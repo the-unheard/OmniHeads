@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/table_top",
+	"textures": {
+		"1": "omniheads:block/pure_darkblack_glass"
+	}
+}

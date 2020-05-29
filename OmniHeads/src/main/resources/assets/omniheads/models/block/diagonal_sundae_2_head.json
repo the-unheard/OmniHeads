@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/diagonal_head",
 	"textures":
 	{
-		"0": "omniheads:block/sundae_2_head"
+		"0": "omniheads:block/head/sundae_2_head"
 	}
 }

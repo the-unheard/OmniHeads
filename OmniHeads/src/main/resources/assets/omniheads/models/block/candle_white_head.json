@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/candle_white_head"
+		"0": "omniheads:block/head/candle_white_head"
 	}
 }

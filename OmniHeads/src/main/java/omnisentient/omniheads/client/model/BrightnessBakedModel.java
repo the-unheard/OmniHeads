@@ -56,7 +56,7 @@ public class BrightnessBakedModel extends BakedModelWrapper
 	public static BakedQuad transformQuad(BakedQuad quad, float light)
 	{
 		if (isLightMapDisabled())
-			return quad;
+		    return quad;
 		VertexFormat newFormat = getFormatWithLightMap(quad.getFormat());
 		UnpackedBakedQuad.Builder builder = new UnpackedBakedQuad.Builder(newFormat);
 		VertexLighterFlat trans = new VertexLighterFlat(Minecraft.getInstance().getBlockColors())
@@ -86,7 +86,7 @@ public class BrightnessBakedModel extends BakedModelWrapper
 	public static VertexFormat getFormatWithLightMap(VertexFormat format)
 	{
 		if (isLightMapDisabled())
-			return format;
+		    return format; 
 		if (format == DefaultVertexFormats.BLOCK)
 			return DefaultVertexFormats.BLOCK;
 		else if (format == DefaultVertexFormats.ITEM)
