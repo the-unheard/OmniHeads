@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/shirts1_head"
+		"0": "omniheads:block/head/shirts1_head"
 	}
 }

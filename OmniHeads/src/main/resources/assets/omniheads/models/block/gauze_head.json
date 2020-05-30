@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/gauze_head"
+		"0": "omniheads:block/head/gauze_head"
 	}
 }

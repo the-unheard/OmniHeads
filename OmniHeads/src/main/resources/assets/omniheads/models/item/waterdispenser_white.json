@@ -1,0 +1,12 @@
+{
+	"parent": "omniheads:block/waterdispenser_white_lower",
+	"display":
+	{
+		"gui":
+		{
+			"rotation": [35, 135, 0],
+			"translation": [-2.5,-0.25,0],
+			"scale": [0.45, 0.45, 0.45]
+		}
+	}
+}

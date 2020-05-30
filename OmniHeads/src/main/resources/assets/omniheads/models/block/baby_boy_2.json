@@ -2,7 +2,7 @@
 	"parent": "omniheads:block/base/baby",
 	"textures":
 	{
-		"0": "omniheads:block/baby_boy_2",
+		"0": "omniheads:block/head/baby_boy_2",
 		"1": "block/cyan_wool",
 		"particle": "block/cyan_wool"
 	}

@@ -35,7 +35,7 @@ public final class OmniItems
 			@Override
 			public ItemStack createIcon()
 			{
-				return new ItemStack(OmniBlocks.PILLOW_GRAY);
+				return new ItemStack(OmniBlocks.CLOCK_GRAY);
 			}
 		},
 		KITCHEN_TAB = new OmniItemGroup("kitchen")
@@ -44,7 +44,7 @@ public final class OmniItems
 			@Override
 			public ItemStack createIcon()
 			{
-				return new ItemStack(OmniBlocks.MICROWAVE_BLACK);
+				return new ItemStack(OmniBlocks.BLENDER_WHITE);
 			}
 		},
 		BATHROOM_TAB = new OmniItemGroup("bathroom")
@@ -80,7 +80,7 @@ public final class OmniItems
 			@Override
 			public ItemStack createIcon()
 			{
-				return new ItemStack(OmniBlocks.IMAC);
+				return new ItemStack(OmniBlocks.CHAIR_DINING_WHITE);
 			}
 		},
 		OUTDOOR_TAB = new OmniItemGroup("outdoor")

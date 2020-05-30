@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/diagonal_head",
 	"textures":
 	{
-		"0": "omniheads:block/car_ranger_head"
+		"0": "omniheads:block/head/car_ranger_head"
 	}
 }

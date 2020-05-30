@@ -3,7 +3,7 @@
 	"parent": "omniheads:block/base/basket",
 	"textures": {
 		"0": "omniheads:block/fruit_redapple",
-		"1": "block/jungle_planks",
+		"2": "block/jungle_planks",
 		"particle": "omniheads:block/fruit_redapple"
 	}
 }

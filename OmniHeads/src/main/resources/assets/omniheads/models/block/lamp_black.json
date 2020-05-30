@@ -3,7 +3,7 @@
 	"textures":
 	{
 		"0": "block/gray_concrete",
-		"1": "omniheads:block/pure_gold_glass",
+		"1": "omniheads:block/ledglass_gold",
 		"particle": "block/gray_concrete"
 	}
 }

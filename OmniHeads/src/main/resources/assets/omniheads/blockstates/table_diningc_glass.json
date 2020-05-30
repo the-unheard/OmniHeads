@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/table_diningc_glass" },
+		"facing=east":  { "model": "omniheads:block/table_diningc_glass", "y": 90 },
+		"facing=south": { "model": "omniheads:block/table_diningc_glass", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/table_diningc_glass", "y": 270 }
+	}
+}

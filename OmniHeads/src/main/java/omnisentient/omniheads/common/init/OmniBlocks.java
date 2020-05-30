@@ -20,10 +20,12 @@ import omnisentient.omniheads.common.block.CartWheelBlock;
 import omnisentient.omniheads.common.block.CctvBlock;
 import omnisentient.omniheads.common.block.DoubleHRBlock;
 import omnisentient.omniheads.common.block.DoubleSeatBlock;
+import omnisentient.omniheads.common.block.GlassTableBlock;
 import omnisentient.omniheads.common.block.HeadRotationBlock;
 import omnisentient.omniheads.common.block.HorizontalRotationBlock;
 import omnisentient.omniheads.common.block.SeatBlock;
 import omnisentient.omniheads.common.block.ShroomBlock;
+import omnisentient.omniheads.common.block.TallHRBlock;
 import omnisentient.omniheads.common.block.ToggleableHRBlock;
 import omnisentient.omniheads.common.block.TranslucentHRBlock;
 import omnisentient.omniheads.common.block.TranslucentSeatBlock;
@@ -56,8 +58,9 @@ public final class OmniBlocks
 	private static VoxelShape frameShape = Block.makeCuboidShape(3d, 0d, 5d, 13d, 7.75d, 9d);
 	private static VoxelShape gumballShape = Block.makeCuboidShape(2d, 0d, 2d, 14d, 13d, 14d);
 	private static VoxelShape imacShape = VoxelShapes.or(Block.makeCuboidShape(5d, 0d, 4d, 14d, 0.2d, 8d), Block.makeCuboidShape(0d, 0d, 9d, 16d, 14d, 14d));
+	private static VoxelShape lampShape = VoxelShapes.or(Block.makeCuboidShape(5d, 0d, 5d, 11d, 1d, 11d), Block.makeCuboidShape(6d, 1d, 6d, 10d, 11.5d, 10d));
 	private static VoxelShape monitorsShape = VoxelShapes.or(Block.makeCuboidShape(4d, 0d, 4d, 15d, 0.3d, 8d), Block.makeCuboidShape(0.4d, 4d, 13d, 16.09d, 13.6d, 13.5d));
-	private static VoxelShape microwaveShape = Block.makeCuboidShape(1d, 0d, 4d, 15d, 8d, 15d);
+	private static VoxelShape microwaveShape = Block.makeCuboidShape(1d, 0.25d, 3.4d, 15d, 8.25d, 13.9d);
 	private static VoxelShape officetableShape = VoxelShapes.or(Block.makeCuboidShape(0d, 15d, 0d, 16d, 16d, 16d), Block.makeCuboidShape(0d, 0d, 0d, 16d, 14d, 16d));
 	private static VoxelShape officetrayShape = VoxelShapes.or(Block.makeCuboidShape(4d, 0d, 3d, 12d, 4d, 13d), Block.makeCuboidShape(4d, 4d, 8d, 12d, 7d, 13d));
 	private static VoxelShape pillowShape = Block.makeCuboidShape(2d, 0d, 3d, 14d, 2d, 13d);
@@ -70,6 +73,7 @@ public final class OmniBlocks
 	private static VoxelShape thinwallShape = Block.makeCuboidShape(0d, 0d, 14d, 16d, 16d, 16d);
 	private static VoxelShape toiletShape = VoxelShapes.or(Block.makeCuboidShape(5d, 2d, 6d, 11d, 5d, 16d), Block.makeCuboidShape(3d, 5d, 3d, 13d, 8.5d, 16d));
 	private static VoxelShape toiletbrushShape = VoxelShapes.or(Block.makeCuboidShape(6d, 0d, 10d, 10d, 6d, 14d), Block.makeCuboidShape(7.5d, 6d, 11.5d, 8.5d, 13.25d, 12.5d));
+	private static VoxelShape tvShape = Block.makeCuboidShape(0d, 0d, 12d, 16d, 16d, 13.25d);
 	private static VoxelShape verticalslabShape = Block.makeCuboidShape(0d, 0d, 8d, 16d, 16d, 16d);
 	private static VoxelShape wallshelvesShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 0d, 16d, 1d, 16d), Block.makeCuboidShape(3d, 0d, 5d, 13d, 8d, 10d));
 	private static VoxelShape toolsShape = Block.makeCuboidShape(0d, 0d, 15d, 16d, 16d, 16d);
@@ -238,6 +242,7 @@ public final class OmniBlocks
 		MICROWAVE = add("microwave", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), microwaveShape)),
 		MICROWAVE_BLACK = add("microwave_black", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), microwaveShape)),
 		TOASTER = add("toaster", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(5.25d, 0d, 6.5d, 10.75d, 4d, 9.5d))),
+		WATERDISPENSER_WHITE = add("waterdispenser_white", OmniItems.KITCHEN_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), Block.makeCuboidShape(4d, 0d, 4d, 12d, 16d, 12d))),
 	
 		// BATHROOM
 		
@@ -269,7 +274,7 @@ public final class OmniBlocks
 		
 		// FURNITURE
 		
-		BOOKSHELF = add("bookshelf", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BOOKSHELF = add("bookshelf", OmniItems.FURNITURE_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		BOOKSHELF_HALF = add("bookshelf_half", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), verticalslabShape)),
 		DRAWER_A_CYAN = add("drawer_a_cyan", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
 		DRAWER_A_GRAY = add("drawer_a_gray", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
@@ -336,19 +341,23 @@ public final class OmniBlocks
 		CHAIR_OUTDOOR_WHITE = add("chair_outdoor_white", OmniItems.TABLECHAIR_TAB, new SeatBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), chairdressingShape, new Vec3d(0.5d, 0.3d, 0.5d))),
 		TABLE_COFFEE = add("table_coffee", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), slabShape)),
 		TABLE_TOP_BLACK = add("table_top_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tabletopShape)),
+		TABLE_TOP_GLASS = add("table_top_glass", OmniItems.TABLECHAIR_TAB, new GlassTableBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tabletopShape)),
 		TABLE_TOP_WHITE = add("table_top_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tabletopShape)),
-		TABLE_DINING_WHITE = add("table_dining_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
 		TABLE_DINING_BLACK = add("table_dining_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
-		TABLE_DININGB_WHITE = add("table_diningb_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtablebShape)),
+		TABLE_DINING_GLASS = add("table_dining_glass", OmniItems.TABLECHAIR_TAB, new GlassTableBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
+		TABLE_DINING_WHITE = add("table_dining_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
 		TABLE_DININGB_BLACK = add("table_diningb_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtablebShape)),
-		TABLE_DININGC_WHITE = add("table_diningc_white", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
+		TABLE_DININGB_GLASS = add("table_diningb_glass", OmniItems.TABLECHAIR_TAB, new GlassTableBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtablebShape)),
+		TABLE_DININGB_WHITE = add("table_diningb_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtablebShape)),
 		TABLE_DININGC_BLACK = add("table_diningc_black", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
+		TABLE_DININGC_GLASS = add("table_diningc_glass", OmniItems.TABLECHAIR_TAB, new GlassTableBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
+		TABLE_DININGC_WHITE = add("table_diningc_white", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), diningtableShape)),
+		TABLE_OFFICE_BLACK = add("table_office_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),	
 		TABLE_OFFICE_WHITE = add("table_office_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
-		TABLE_OFFICE_BLACK = add("table_office_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
-		TABLE_OFFICEB_WHITE = add("table_officeb_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
 		TABLE_OFFICEB_BLACK = add("table_officeb_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
-		TABLE_OFFICEC_WHITE = add("table_officec_white", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
+		TABLE_OFFICEB_WHITE = add("table_officeb_white", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
 		TABLE_OFFICEC_BLACK = add("table_officec_black", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
+		TABLE_OFFICEC_WHITE = add("table_officec_white", OmniItems.TABLECHAIR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), officetableShape)),
 		TABLE_OUTDOOR_ACACIA = add("table_outdoor_acacia", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), diningtablebShape)),
 		TABLE_OUTDOOR_BIRCH = add("table_outdoor_birch", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), diningtablebShape)),
 		TABLE_OUTDOOR_BLACK = add("table_outdoor_black", OmniItems.TABLECHAIR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), diningtablebShape)),
@@ -376,10 +385,10 @@ public final class OmniBlocks
 		MAILBOX = add("mailbox", OmniItems.OUTDOOR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(5d, 0d, 1d, 11d, 8d, 15d))),
 		RADIATOR_BLACK = add("radiator_black", OmniItems.OUTDOOR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
 		RADIATOR_WHITE = add("radiator_white", OmniItems.OUTDOOR_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
-		TV_BOTTOM = add("tv_bottom", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
-		TV_PART = add("tv_part", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
-		TV_STAND = add("tv_stand", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
-		TV_WALL = add("tv_wall", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), thinwallShape)),
+		TV_BOTTOM = add("tv_bottom", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tvShape)),
+		TV_PART = add("tv_part", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tvShape)),
+		TV_STAND = add("tv_stand", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tvShape)),
+		TV_WALL = add("tv_wall", OmniItems.OUTDOOR_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), tvShape)),
 		
 		// DECORATIONS
 		
@@ -390,8 +399,8 @@ public final class OmniBlocks
 		FRAMEB_BLACK= add("frameb_black", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), frameShape)),
 		FRAMEB_WHITE= add("frameb_white", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), frameShape)),
 		FRAMEC_BLACK= add("framec_black", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), frameShape)),
-		LAMP_BLACK = add("lamp_black", OmniItems.DECORATION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS).lightValue(15), Block.makeCuboidShape(6d, 0d, 6d, 10d, 12.5d, 10d))),
-		LAMP_WHITE = add("lamp_white", OmniItems.DECORATION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS).lightValue(15), Block.makeCuboidShape(6d, 0d, 6d, 10d, 12.5d, 10d))),
+		LAMP_BLACK = add("lamp_black", OmniItems.DECORATION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), lampShape)),
+		LAMP_WHITE = add("lamp_white", OmniItems.DECORATION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), lampShape)),
 		FRAMEC_WHITE= add("framec_white", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), frameShape)),			
 		MAGAZINES = add("magazines", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(4d, 0d, 4d, 11d, 5d, 12d))),
 		NEWSTONSCRADLE_BLACK = add("newtonscradle_black", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(3d, 0d, 6d, 13d, 7d, 10d))),

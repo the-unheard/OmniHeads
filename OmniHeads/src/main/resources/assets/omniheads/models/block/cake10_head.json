@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/cake10_head"
+		"0": "omniheads:block/head/cake10_head"
 	}
 }

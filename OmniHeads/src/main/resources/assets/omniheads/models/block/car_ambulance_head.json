@@ -2,6 +2,6 @@
 	"parent": "omniheads:block/base/head",
 	"textures":
 	{
-		"0": "omniheads:block/car_ambulance_head"
+		"0": "omniheads:block/head/car_ambulance_head"
 	}
 }

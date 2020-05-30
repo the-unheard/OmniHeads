@@ -77,4 +77,5 @@ public class HorizontalRotationBlock extends Block
 	{
 		return BlockRenderLayer.CUTOUT;
 	}
+
 }
