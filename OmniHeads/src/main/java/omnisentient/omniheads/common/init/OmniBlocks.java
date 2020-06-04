@@ -360,8 +360,8 @@ public final class OmniBlocks
 		
 		GLASSFENCE_BLACK = add("glassfence_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		GLASSFENCE_WHITE = add("glassfence_white", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
-		MODERNDOOR1 = add("moderndoor1", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
-		MODERNDOOR2 = add("moderndoor2", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
+		MODERNDOOR1 = add("moderndoor1", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR2 = add("moderndoor2", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
 		STAIRGLASSFENCE_BLACK = add("stairglassfence_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCE_WHITE = add("stairglassfence_white", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCEB_BLACK = add("stairglassfenceb_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
