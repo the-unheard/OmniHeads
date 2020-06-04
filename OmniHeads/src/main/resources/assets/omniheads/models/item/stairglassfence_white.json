@@ -2,9 +2,9 @@
 	"parent": "omniheads:block/stairglassfence_white",
 	"display": {
 		"gui": {
-			"rotation": [0, 135, 0],
-			"translation": [0, -2.75, 0],
-			"scale": [0.4, 0.4, 0.4]
+			"rotation": [0, -180, 0],
+			"translation": [0, -3, 0],
+			"scale": [0.44, 0.44, 0.44]
 		}
 	}
 }

@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/winebottles",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-1.5, 2, 0],
+			"scale": [1, 1, 1]
+		}
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/quarter_pillar",
+	"textures": {
+		"0": "block/jungle_planks"
+	}
+}

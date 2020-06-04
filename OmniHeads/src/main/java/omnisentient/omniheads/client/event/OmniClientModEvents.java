@@ -10,6 +10,9 @@ import com.google.common.collect.Lists;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.Block.Properties;
+import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.BlockModelShapes;
 import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;
@@ -27,8 +30,10 @@ import omnisentient.omniheads.OmniHeads;
 import omnisentient.omniheads.client.model.BrightnessBakedModel;
 import omnisentient.omniheads.client.model.MultilayerBakedModel;
 import omnisentient.omniheads.client.render.EmptyRenderer;
+import omnisentient.omniheads.common.block.TranslucentHRBlock;
 import omnisentient.omniheads.common.entity.SeatEntity;
 import omnisentient.omniheads.common.init.OmniBlocks;
+import omnisentient.omniheads.common.init.OmniItems;
 
 @Mod.EventBusSubscriber(modid = OmniHeads.ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class OmniClientModEvents
@@ -49,12 +54,20 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.DOGBOWL_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.DOGBOWL_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.DOGBOWL_CYAN, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.DONUT_SERVING1, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.DONUT_SERVING2, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.DONUT_SERVING3, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.FASTFOOD_SERVING1, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.FASTFOOD_SERVING2, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.FASTFOOD_SERVING3, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GLASSFENCE_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GLASSFENCE_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GLASS_SHELF_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GLASS_SHELF_BLUE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GUMBALL_CYAN, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.GUMBALL_RED, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.MODERNDOOR1, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.ICEBUCKET, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.LAMP_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.LAMP_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.MICROWAVE, model -> new MultilayerBakedModel(model, selector));
@@ -80,7 +93,30 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.TV_PART, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_STAND, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.TV_WALL, model -> new MultilayerBakedModel(model, selector));
-
+		addBlockOverride(OmniBlocks.WF_DOWNCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_DOWN, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EASTCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EASTDOWN, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EASTTRIANGLE, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EASTUP, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EASTWEST, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_EAST, model -> new MultilayerBakedModel(model, selector));	
+		addBlockOverride(OmniBlocks.WF_FRAMELESSCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_FRAMELESS, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_LOWERCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_SIDEFRAMESCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_SQUARECORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_SQUARE, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_UPCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_UPDOWN, model -> new MultilayerBakedModel(model, selector));		
+		addBlockOverride(OmniBlocks.WF_UP, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_UPPERCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_WESTCORNER, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_WESTDOWN, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_WESTTRIANGLE, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_WESTUP, model -> new MultilayerBakedModel(model, selector));
+		addBlockOverride(OmniBlocks.WF_WEST, model -> new MultilayerBakedModel(model, selector));
+		
 		addFullOverride(OmniBlocks.ALARM_CYAN, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.ALARM_GRAY, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.ALARM_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
@@ -96,6 +132,7 @@ public class OmniClientModEvents
 		addFullOverride(OmniBlocks.TABLE_DININGC_BLACK, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.TABLE_DININGC_GLASS, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.TABLE_DININGC_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+		addFullOverride(OmniBlocks.WATERDISPENSER_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 	}
 
 	@SubscribeEvent

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/wf_framelesscorner" },
+		"facing=east": { "model": "omniheads:block/wf_framelesscorner", "y": 90 },
+		"facing=south": { "model": "omniheads:block/wf_framelesscorner", "y": 180 },
+		"facing=west": { "model": "omniheads:block/wf_framelesscorner", "y": 270 }
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"parent": "omniheads:block/icebucket",
+	"display": {
+		"gui": {
+			"rotation": [35, 135, 0],
+			"translation": [-1.75, 3.5, 0],
+			"scale": [1, 1, 1]
+		}
+	}
+}
