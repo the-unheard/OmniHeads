@@ -1,9 +1,13 @@
 {
 	"variants":
 	{
-		"facing=north": { "model": "omniheads:block/chair_office_white" },
-		"facing=east":  { "model": "omniheads:block/chair_office_white", "y": 90 },
-		"facing=south": { "model": "omniheads:block/chair_office_white", "y": 180 },
-		"facing=west":  { "model": "omniheads:block/chair_office_white", "y": 270 }
+		"facing=north,half=lower": { "model": "omniheads:block/chair_office_white_lower" },
+		"facing=east,half=lower":  { "model": "omniheads:block/chair_office_white_lower", "y": 90 },
+		"facing=west,half=lower":  { "model": "omniheads:block/chair_office_white_lower", "y": 270 },
+		"facing=south,half=lower": { "model": "omniheads:block/chair_office_white_lower", "y": 180 },
+		"facing=north,half=upper": { "model": "omniheads:block/chair_office_white_upper" },
+		"facing=east,half=upper":  { "model": "omniheads:block/chair_office_white_upper", "y": 90 },
+		"facing=west,half=upper":  { "model": "omniheads:block/chair_office_white_upper", "y": 270 },
+		"facing=south,half=upper": { "model": "omniheads:block/chair_office_white_upper", "y": 180 }
 	}
 }

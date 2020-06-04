@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/icebucket" },
+		"facing=east": { "model": "omniheads:block/icebucket", "y": 90 },
+		"facing=south": { "model": "omniheads:block/icebucket", "y": 180 },
+		"facing=west": { "model": "omniheads:block/icebucket", "y": 270 }
+	}
+}

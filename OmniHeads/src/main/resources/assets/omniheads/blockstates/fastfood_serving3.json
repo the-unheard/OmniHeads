@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/fastfood_serving3" },
+		"facing=east": { "model": "omniheads:block/fastfood_serving3", "y": 90 },
+		"facing=south": { "model": "omniheads:block/fastfood_serving3", "y": 180 },
+		"facing=west": { "model": "omniheads:block/fastfood_serving3", "y": 270 }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/preparation_steak" },
+		"facing=east": { "model": "omniheads:block/preparation_steak", "y": 90 },
+		"facing=south": { "model": "omniheads:block/preparation_steak", "y": 180 },
+		"facing=west": { "model": "omniheads:block/preparation_steak", "y": 270 }
+	}
+}

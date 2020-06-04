@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/path2",
+	"textures": {
+		"0": "block/diorite"
+	}
+}

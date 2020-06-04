@@ -1,0 +1,9 @@
+{
+	"parent": "omniheads:block/base/chair_dining_upper",
+	"textures": {
+		"0": "block/light_gray_concrete",
+		"1": "block/gray_concrete",
+		"2": "block/gray_concrete",
+		"particle": "block/light_gray_concrete"
+	}
+}

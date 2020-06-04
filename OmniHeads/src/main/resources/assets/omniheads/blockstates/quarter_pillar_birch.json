@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/quarter_pillar_birch" },
+		"facing=east":  { "model": "omniheads:block/quarter_pillar_birch", "y": 90 },
+		"facing=south": { "model": "omniheads:block/quarter_pillar_birch", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/quarter_pillar_birch", "y": 270 }
+	}
+}

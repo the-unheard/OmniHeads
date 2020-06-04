@@ -1,0 +1,8 @@
+{
+	"parent": "omniheads:block/base/lined_concrete_corner",
+	"textures":
+	{
+		"1": "block/white_concrete",
+		"3": "block/gray_concrete"
+	}
+}

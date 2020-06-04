@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/quarter_pillar_acacia" },
+		"facing=east":  { "model": "omniheads:block/quarter_pillar_acacia", "y": 90 },
+		"facing=south": { "model": "omniheads:block/quarter_pillar_acacia", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/quarter_pillar_acacia", "y": 270 }
+	}
+}

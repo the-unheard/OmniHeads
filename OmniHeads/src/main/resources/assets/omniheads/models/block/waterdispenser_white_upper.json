@@ -7,7 +7,7 @@
 		"2": "omniheads:block/metal_texture",
 		"3": "block/light_gray_concrete",
 		"4": "block/red_concrete",
-		"5": "block/black_concrete",
+		"6": "omniheads:block/ledglass_blue",
 		"particle": "block/white_concrete"
 	}
 }

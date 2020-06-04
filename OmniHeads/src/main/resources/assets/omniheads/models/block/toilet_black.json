@@ -1,8 +1,0 @@
-{
-	"parent": "omniheads:block/base/toilet",
-	"textures": {
-		"0": "block/gray_concrete",
-		"1": "omniheads:block/pure_blue_glass",
-		"particle": "block/gray_concrete"
-	}
-}
