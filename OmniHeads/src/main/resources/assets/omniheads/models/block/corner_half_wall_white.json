@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/corner_half_wall",
+	"textures": {
+		"0": "block/white_concrete"
+	}
+}

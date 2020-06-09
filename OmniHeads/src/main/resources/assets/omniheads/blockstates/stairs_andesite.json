@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/stairs_andesite" },
+		"facing=east":  { "model": "omniheads:block/stairs_andesite", "y": 90 },
+		"facing=south": { "model": "omniheads:block/stairs_andesite", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/stairs_andesite", "y": 270 }
+	}
+}

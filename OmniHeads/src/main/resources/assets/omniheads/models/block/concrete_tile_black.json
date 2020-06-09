@@ -1,0 +1,8 @@
+{
+	"parent": "omniheads:block/base/concrete_tile",
+	"textures":
+	{
+		"0": "block/gray_concrete",
+		"particle": "block/gray_concrete"
+	}
+}

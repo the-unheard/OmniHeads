@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "omniheads:block/bush_slab" },
+        "type=top": { "model": "omniheads:block/bush_slab_top" },
+        "type=double": { "model": "omniheads:block/bush_block" }
+    }
+}

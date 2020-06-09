@@ -1,6 +1,10 @@
 package omnisentient.omniheads.common.block;
 
+import java.util.Map;
+
 import javax.annotation.Nullable;
+
+import com.google.common.collect.Maps;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -16,23 +20,47 @@ import net.minecraft.state.properties.DoubleBlockHalf;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 
 public class TallHRBlock extends TranslucentHRBlock
 {
-	public TallHRBlock(Properties props, VoxelShape northShape)
+	
+	public final Map<Direction, VoxelShape> shapes = Maps.newEnumMap(Direction.class);
+	
+	public TallHRBlock(Properties props, VoxelShape northShape, VoxelShape upperShape)
 	{
 		super(props, northShape);
 		this.setDefaultState(this.stateContainer.getBaseState().with(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
+		shapes.put(Direction.NORTH, upperShape);
+		shapes.put(Direction.EAST, rotateShape(Direction.NORTH, Direction.EAST, upperShape));
+		shapes.put(Direction.SOUTH, rotateShape(Direction.NORTH, Direction.SOUTH, upperShape));
+		shapes.put(Direction.WEST, rotateShape(Direction.NORTH, Direction.WEST, upperShape));
 	}
 
 	public TallHRBlock(Properties props)
 	{
 		super(props);
 		this.setDefaultState(this.stateContainer.getBaseState().with(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER));
+		shapes.put(Direction.NORTH, VoxelShapes.fullCube());
+		shapes.put(Direction.EAST, VoxelShapes.fullCube());
+		shapes.put(Direction.SOUTH, VoxelShapes.fullCube());
+		shapes.put(Direction.WEST, VoxelShapes.fullCube());
+	}
+	
+	@Override
+	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext ctx)
+	{
+		if(state.get(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER)
+		{
+			return this.shapes.getOrDefault(state.get(BlockStateProperties.HORIZONTAL_FACING), VoxelShapes.fullCube());
+		}
+		return super.getShape(state, world, pos, ctx);
 	}
 
 	@Override

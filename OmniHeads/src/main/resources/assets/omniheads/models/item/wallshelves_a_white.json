@@ -2,9 +2,9 @@
 	"parent": "omniheads:block/wallshelves_a_white",
 	"display": {
 		"gui": {
-			"rotation": [35, 135, 0],
-			"translation": [0.5, -1.25, 0],
-			"scale": [0.25, 0.25, 0.25]
+			"rotation": [20, -180, 0],
+			"translation": [0, -1.75, 0],
+			"scale": [0.31, 0.31, 0.31]
 		}
 	}
 }

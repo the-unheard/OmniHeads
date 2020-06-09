@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/shoes_leather_black" },
+		"facing=east": { "model": "omniheads:block/shoes_leather_black", "y": 90 },
+		"facing=south": { "model": "omniheads:block/shoes_leather_black", "y": 180 },
+		"facing=west": { "model": "omniheads:block/shoes_leather_black", "y": 270 }
+	}
+}

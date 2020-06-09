@@ -1,0 +1,13 @@
+{
+	"variants":
+	{
+		"facing=north,half=lower": { "model": "omniheads:block/clothes_pants_black_lower" },
+		"facing=east,half=lower":  { "model": "omniheads:block/clothes_pants_black_lower", "y": 90 },
+		"facing=west,half=lower":  { "model": "omniheads:block/clothes_pants_black_lower", "y": 270 },
+		"facing=south,half=lower": { "model": "omniheads:block/clothes_pants_black_lower", "y": 180 },
+		"facing=north,half=upper": { "model": "omniheads:block/clothes_pants_black_upper" },
+		"facing=east,half=upper":  { "model": "omniheads:block/clothes_pants_black_upper", "y": 90 },
+		"facing=west,half=upper":  { "model": "omniheads:block/clothes_pants_black_upper", "y": 270 },
+		"facing=south,half=upper": { "model": "omniheads:block/clothes_pants_black_upper", "y": 180 }
+	}
+}

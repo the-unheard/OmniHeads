@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/corner_wall_granite" },
+		"facing=east":  { "model": "omniheads:block/corner_wall_granite", "y": 90 },
+		"facing=south": { "model": "omniheads:block/corner_wall_granite", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/corner_wall_granite", "y": 270 }
+	}
+}

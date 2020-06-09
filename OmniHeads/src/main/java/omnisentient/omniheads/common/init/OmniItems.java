@@ -110,6 +110,15 @@ public final class OmniItems
 				return new ItemStack(OmniBlocks.BOOKSET_A);
 			}
 		},
+		LIGHTING_TAB = new OmniItemGroup("lighting")
+		{
+			@OnlyIn(Dist.CLIENT)
+			@Override
+			public ItemStack createIcon()
+			{
+				return new ItemStack(OmniBlocks.CEILING_FLAT_LIGHT);
+			}
+		},
 		CONSTRUCTION_TAB = new OmniItemGroup("construction")
 		{
 			@OnlyIn(Dist.CLIENT)
@@ -135,6 +144,15 @@ public final class OmniItems
 			public ItemStack createIcon()
 			{
 				return new ItemStack(OmniBlocks.ASPHALT_BLOCK_LINED);
+			}
+		},
+		PLANTS_TAB = new OmniItemGroup("plants")
+		{
+			@OnlyIn(Dist.CLIENT)
+			@Override
+			public ItemStack createIcon()
+			{
+				return new ItemStack(OmniBlocks.SMALL_RED_SHROOM);
 			}
 		},
 		OTHERS_TAB = new OmniItemGroup("others")

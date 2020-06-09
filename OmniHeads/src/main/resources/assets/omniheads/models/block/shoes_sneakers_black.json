@@ -1,0 +1,11 @@
+{
+	"parent": "omniheads:block/base/shoes_sneakers",
+	"textures": {
+		"0": "block/gray_concrete",
+		"1": "block/white_concrete",
+		"2": "block/red_concrete",
+		"3": "block/gray_concrete",
+		"4": "omniheads:block/pure_black_glass",
+		"particle": "block/gray_concrete"
+	}
+}

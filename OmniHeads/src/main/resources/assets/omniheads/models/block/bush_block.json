@@ -1,0 +1,6 @@
+{
+    "parent": "omniheads:block/base/culledcube",
+    "textures": {
+        "0": "omniheads:block/bush"
+    }
+}

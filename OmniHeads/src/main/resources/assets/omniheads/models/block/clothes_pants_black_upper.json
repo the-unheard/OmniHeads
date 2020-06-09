@@ -1,0 +1,11 @@
+{
+	"parent": "omniheads:block/base/clothes_pants_upper",
+	"textures":
+	{
+		"3": "block/gray_concrete",
+		"4": "omniheads:block/metal_texture",
+		"5": "omniheads:block/pure_black_glass",
+		"6": "omniheads:block/closets",
+		"particle": "block/gray_concrete"
+	}
+}
