@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/ceiling_flat_light" },
+		"facing=east": { "model": "omniheads:block/ceiling_flat_light", "y": 90 },
+		"facing=south": { "model": "omniheads:block/ceiling_flat_light", "y": 180 },
+		"facing=west": { "model": "omniheads:block/ceiling_flat_light", "y": 270 }
+	}
+}

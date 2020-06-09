@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/stairs_granite" },
+		"facing=east":  { "model": "omniheads:block/stairs_granite", "y": 90 },
+		"facing=south": { "model": "omniheads:block/stairs_granite", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/stairs_granite", "y": 270 }
+	}
+}

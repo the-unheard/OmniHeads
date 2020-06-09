@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/bush_block" },
+		"facing=east": { "model": "omniheads:block/bush_block", "y": 90 },
+		"facing=south": { "model": "omniheads:block/bush_block", "y": 180 },
+		"facing=west": { "model": "omniheads:block/bush_block", "y": 270 }
+	}
+}

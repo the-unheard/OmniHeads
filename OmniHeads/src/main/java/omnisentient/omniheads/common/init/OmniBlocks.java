@@ -20,7 +20,9 @@ import omnisentient.omniheads.common.block.CartWheelBlock;
 import omnisentient.omniheads.common.block.CctvBlock;
 import omnisentient.omniheads.common.block.DoubleHRBlock;
 import omnisentient.omniheads.common.block.DoubleSeatBlock;
-import omnisentient.omniheads.common.block.GlassDoorBlock;
+import omnisentient.omniheads.common.block.NormalDoorBlock;
+import omnisentient.omniheads.common.block.NormalGrassBlock;
+import omnisentient.omniheads.common.block.NormalSlabBlock;
 import omnisentient.omniheads.common.block.GlassTableBlock;
 import omnisentient.omniheads.common.block.HeadRotationBlock;
 import omnisentient.omniheads.common.block.HorizontalRotationBlock;
@@ -31,6 +33,7 @@ import omnisentient.omniheads.common.block.TallSeatBlock;
 import omnisentient.omniheads.common.block.ToggleableHRBlock;
 import omnisentient.omniheads.common.block.TranslucentHRBlock;
 import omnisentient.omniheads.common.block.TranslucentSeatBlock;
+import omnisentient.omniheads.common.block.WateredHRBlock;
 
 public final class OmniBlocks
 {
@@ -50,10 +53,15 @@ public final class OmniBlocks
 	private static VoxelShape blanketShape = Block.makeCuboidShape(0d, 0d, 0d, 16d, 2d, 16d);
 	private static VoxelShape blanketfootShape = Block.makeCuboidShape(0d, 0d, 14d, 16d, 2d, 16d);
 	private static VoxelShape blenderShape = VoxelShapes.or(Block.makeCuboidShape(5.25d, 0d, 5d, 10.75d, 3d, 7d), Block.makeCuboidShape(5.25d, 0d, 7d, 10.75d, 11d, 12d));
+	private static VoxelShape carpetShape = Block.makeCuboidShape(0d, 0d, 0d, 16d, 1d, 16d);
+	private static VoxelShape ceilingShape = Block.makeCuboidShape(0d, 15d, 0d, 16d, 16d, 16d);
 	private static VoxelShape chairdiningShape = VoxelShapes.or(Block.makeCuboidShape(2.5d, 0d, 4d, 13.5d, 8.5d, 16d), Block.makeCuboidShape(2.5d, 8.5d, 4d, 13.5d, 16d, 5.5d));
 	private static VoxelShape chairdiningupperShape = Block.makeCuboidShape(2.5d, 0d, 4d, 13.5d, 5.65d, 5.4d);
 	private static VoxelShape chairdressingShape = Block.makeCuboidShape(2.25d, 0d, 6.5d, 13.75d, 9d, 14d);
 	private static VoxelShape clockShape = Block.makeCuboidShape(0d, 0d, 14d, 16d, 16d, 16d);
+	private static VoxelShape closetsShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 0d, 16d, 16d, 0.95d), Block.makeCuboidShape(0d, 0d, 1d, 16d, 16d, 16d));
+	private static VoxelShape cornerhalfwallShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 0d, 8d, 8d, 16d), Block.makeCuboidShape(8d, 0d, 8d, 16d, 8d, 16d));
+	private static VoxelShape cornerwallShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 0d, 8d, 16d, 16d), Block.makeCuboidShape(8d, 0d, 8d, 16d, 16d, 16d));
 	private static VoxelShape diningtableShape = VoxelShapes.or(Block.makeCuboidShape(0d, 15d, 0d, 16d, 16d, 16d), Block.makeCuboidShape(0d, 0d, 10d, 16d, 15d, 16d));
 	private static VoxelShape diningtablebShape = VoxelShapes.or(Block.makeCuboidShape(0d, 15d, 0d, 16d, 16d, 16d), Block.makeCuboidShape(6d, 0d, 8d, 10d, 15d, 16d));
 	private static VoxelShape dogbowlShape = Block.makeCuboidShape(1d, 0d, 4d, 15d, 3d, 12d);
@@ -87,7 +95,10 @@ public final class OmniBlocks
 	private static VoxelShape tvShape = Block.makeCuboidShape(0d, 0d, 12d, 16d, 16d, 13.25d);
 	private static VoxelShape verticalslabShape = Block.makeCuboidShape(0d, 0d, 8d, 16d, 16d, 16d);
 	private static VoxelShape wallshelvesShape = VoxelShapes.or(Block.makeCuboidShape(0d, 0d, 0d, 16d, 1d, 16d), Block.makeCuboidShape(3d, 0d, 5d, 13d, 8d, 10d));
+	private static VoxelShape waterdispenserbotShape = Block.makeCuboidShape(3.5d, 0d, 4d, 12.5d, 16d, 13d);
+	private static VoxelShape waterdispensertopShape = Block.makeCuboidShape(3.5d, 0d, 4d, 12.5d, 7d, 13d);
 	private static VoxelShape windowShape = Block.makeCuboidShape(0d, 0d, 11.5d, 16d, 16d, 12.5d);
+	private static VoxelShape windowcornerShape = VoxelShapes.or(Block.makeCuboidShape(3.5d, 0d, 0d, 4.5d, 16d, 12.5d), Block.makeCuboidShape(4.5d, 0d, 11.5d, 16d, 16d, 12.5d));
 	
 	private static Vec3d chairsVec = new Vec3d(0.5d, 0.25d, 0.5d);
 	
@@ -239,8 +250,8 @@ public final class OmniBlocks
 		MICROWAVE = add("microwave", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), microwaveShape)),
 		MICROWAVE_BLACK = add("microwave_black", OmniItems.KITCHEN_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), microwaveShape)),
 		TOASTER = add("toaster", OmniItems.KITCHEN_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(5.25d, 0d, 6.5d, 10.75d, 4d, 9.5d))),
-		WATERDISPENSER_BLACK = add("waterdispenser_black", OmniItems.KITCHEN_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(3.5d, 0d, 4d, 12.5d, 16d, 13d))),
-		WATERDISPENSER_WHITE = add("waterdispenser_white", OmniItems.KITCHEN_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), Block.makeCuboidShape(3.5d, 0d, 4d, 12.5d, 16d, 13d))),
+		WATERDISPENSER_BLACK = add("waterdispenser_black", OmniItems.KITCHEN_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), waterdispenserbotShape, waterdispensertopShape)),
+		WATERDISPENSER_WHITE = add("waterdispenser_white", OmniItems.KITCHEN_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), waterdispenserbotShape, waterdispensertopShape)),
 	
 		// BATHROOM
 		
@@ -303,6 +314,35 @@ public final class OmniBlocks
 		WALLSHELVES_B_SPRUCE = add("wallshelves_b_spruce", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), wallshelvesShape)),
 		WALLSHELVES_B_WHITE = add("wallshelves_b_white", OmniItems.FURNITURE_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), wallshelvesShape)),
 		
+		SHOES_BOOTS_BLACK = add("shoes_boots_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_BOOTS_WHITE = add("shoes_boots_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_HEELS_BLACK = add("shoes_heels_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_HEELS_WHITE = add("shoes_heels_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_HIGHTOPS_BLACK = add("shoes_hightops_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_HIGHTOPS_WHITE = add("shoes_hightops_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_LEATHER_BLACK = add("shoes_leather_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_LEATHER_WHITE = add("shoes_leather_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_SNEAKERS_BLACK = add("shoes_sneakers_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		SHOES_SNEAKERS_WHITE = add("shoes_sneakers_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_BLOUSE_BLACK = add("clothes_blouse_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_BLOUSE_WHITE = add("clothes_blouse_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_SHIRT_BLACK = add("clothes_shirt_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_SHIRT_WHITE = add("clothes_shirt_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_SHORTS_BLACK = add("clothes_shorts_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_SHORTS_WHITE = add("clothes_shorts_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOTHES_PANTS_BLACK = add("clothes_pants_black", OmniItems.FURNITURE_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape, closetsShape)),
+		CLOTHES_PANTS_WHITE = add("clothes_pants_white", OmniItems.FURNITURE_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape, closetsShape)),
+		CLOTHES_SUITS_BLACK = add("clothes_suits_black", OmniItems.FURNITURE_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape, closetsShape)),
+		CLOTHES_SUITS_WHITE = add("clothes_suits_white", OmniItems.FURNITURE_TAB, new TallHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape, closetsShape)),
+		CLOSET_BOX_BLACK = add("closet_box_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOSET_BOX_WHITE = add("closet_box_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOSET_TOWELS_BLACK = add("closet_towels_black", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		CLOSET_TOWELS_WHITE = add("closet_towels_white", OmniItems.FURNITURE_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.STONE), closetsShape)),
+		
+		// LIGHTING
+		CEILING_FLAT_LIGHT = add("ceiling_flat_light", OmniItems.LIGHTING_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.GLASS).lightValue(15), ceilingShape)),
+		FLOOR_FLAT_LIGHT = add("floor_flat_light", OmniItems.LIGHTING_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.GLASS).lightValue(15), carpetShape)),
+
 		// CONSTRUCTION
 		
 		BEDRAILSIDE_ACACIA = add("bedrailside_acacia", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), bedrailsideShape)),
@@ -321,6 +361,12 @@ public final class OmniBlocks
 		BEDRAILCORNER_OAK = add("bedrailcorner_oak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), bedrailcornerShape)),
 		BEDRAILCORNER_SPRUCE = add("bedrailcorner_spruce", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), bedrailcornerShape)),
 		BEDRAILCORNER_WHITE = add("bedrailcorner_white", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), bedrailcornerShape)),
+		CONCRETE_CEILING_BLACK = add("concrete_ceiling_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), ceilingShape)),
+		CONCRETE_CEILING_LGRAY = add("concrete_ceiling_lgray", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), ceilingShape)),
+		CONCRETE_CEILING_WHITE = add("concrete_ceiling_white", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), ceilingShape)),
+		CONCRETE_TILE_BLACK = add("concrete_tile_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), carpetShape)),
+		CONCRETE_TILE_LGRAY = add("concrete_tile_lgray", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), carpetShape)),
+		CONCRETE_TILE_WHITE = add("concrete_tile_white", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), carpetShape)),
 		LINED_CONCRETE_BLACK = add("lined_concrete_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		LINED_CONCRETE_WHITE = add("lined_concrete_white", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		LINED_CONCRETE_CORNER_BLACK = add("lined_concrete_corner_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
@@ -355,13 +401,43 @@ public final class OmniBlocks
 		ROD_DARK_OAK = add("rod_dark_oak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), rodShape)),
 		ROD_ACACIA = add("rod_acacia", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), rodShape)),	
 		ROD_JUNGLE = add("rod_jungle", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), rodShape)),
+		CORNER_HALF_WALL_ACACIA = add("corner_half_wall_acacia", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_ANDESITE = add("corner_half_wall_andesite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_BIRCH = add("corner_half_wall_birch", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_BLACK = add("corner_half_wall_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_DARKOAK = add("corner_half_wall_darkoak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_DIORITE = add("corner_half_wall_diorite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_GRANITE = add("corner_half_wall_granite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_JUNGLE = add("corner_half_wall_jungle", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_OAK = add("corner_half_wall_oak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_SPRUCE = add("corner_half_wall_spruce", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_STONE = add("corner_half_wall_stone", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_HALF_WALL_WHITE = add("corner_half_wall_white", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerhalfwallShape)),
+		CORNER_WALL_ACACIA = add("corner_wall_acacia", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_ANDESITE = add("corner_wall_andesite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_BIRCH = add("corner_wall_birch", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_BLACK = add("corner_wall_black", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_DARKOAK = add("corner_wall_darkoak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_DIORITE = add("corner_wall_diorite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_GRANITE = add("corner_wall_granite", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_JUNGLE = add("corner_wall_jungle", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_OAK = add("corner_wall_oak", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_SPRUCE = add("corner_wall_spruce", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_STONE = add("corner_wall_stone", OmniItems.CONSTRUCTION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
+		CORNER_WALL_WHITE = add("corner_wall_white", OmniItems.CONSTRUCTION_TAB, new WateredHRBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), cornerwallShape)),
 		
 		// FIXTURES
 		
 		GLASSFENCE_BLACK = add("glassfence_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		GLASSFENCE_WHITE = add("glassfence_white", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
-		MODERNDOOR1 = add("moderndoor1", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
-		MODERNDOOR2 = add("moderndoor2", OmniItems.FIXTURES_TAB, new GlassDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR1 = add("moderndoor1", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR2 = add("moderndoor2", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR3 = add("moderndoor3", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR4 = add("moderndoor4", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.GLASS))),
+		MODERNDOOR5 = add("moderndoor5", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.GLASS))),
+		MODERNDOOR5B = add("moderndoor5b", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.GLASS))),
+		MODERNDOOR6 = add("moderndoor6", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		MODERNDOOR6B = add("moderndoor6b", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
 		STAIRGLASSFENCE_BLACK = add("stairglassfence_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCE_WHITE = add("stairglassfence_white", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCEB_BLACK = add("stairglassfenceb_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
@@ -374,6 +450,10 @@ public final class OmniBlocks
 		STAIRS_OAK = add("stairs_oak", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
 		STAIRS_SPRUCE = add("stairs_spruce", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
 		STAIRS_WHITE = add("stairs_white", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
+		STAIRS_ANDESITE = add("stairs_andesite", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
+		STAIRS_DIORITE = add("stairs_diorite", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
+		STAIRS_GRANITE = add("stairs_granite", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
+		STAIRS_STONE = add("stairs_stone", OmniItems.FIXTURES_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), modernstairShape)),
 				
 		
 		WF_UP = add("wf_up", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
@@ -396,11 +476,13 @@ public final class OmniBlocks
 		WF_SQUARE = add("wf_square", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
 		WF_FRAMELESS = add("wf_frameless", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
 		
-		WF_LOWERCORNER = add("wf_lowercorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
-		WF_UPPERCORNER = add("wf_uppercorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
-		WF_SIDEFRAMESCORNER = add("wf_sideframescorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
-		WF_FRAMELESSCORNER = add("wf_framelesscorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
-		WF_SQUARECORNER = add("wf_squarecorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
+		WF_LOWERCORNER = add("wf_lowercorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_UPPERCORNER = add("wf_uppercorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_SIDEFRAMESCORNER = add("wf_sideframescorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_FRAMELESSCORNER = add("wf_framelesscorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_SQUARECORNER = add("wf_squarecorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_BOTTOMFRAMESCORNER = add("wf_bottomframescorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
+		WF_TOPFRAMESCORNER = add("wf_topframescorner", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowcornerShape)),
 
 		WF_EASTTRIANGLE = add("wf_easttriangle", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
 		WF_WESTTRIANGLE = add("wf_westtriangle", OmniItems.CONSTRUCTION_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), windowShape)),
@@ -488,10 +570,12 @@ public final class OmniBlocks
 		NEWSTONSCRADLE_BLACK = add("newtonscradle_black", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(3d, 0d, 6d, 13d, 7d, 10d))),
 		NEWSTONSCRADLE_WHITE = add("newtonscradle_white", OmniItems.DECORATION_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD), Block.makeCuboidShape(3d, 0d, 6d, 13d, 7d, 10d))),
 		
+		
 		// ROAD
 		
 		ASPHALT_BLOCK = add("asphalt_block", OmniItems.ROAD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		ASPHALT_BLOCK_LINED = add("asphalt_block_lined", OmniItems.ROAD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
+		ASPHALT_SLAB = add("asphalt_slab", OmniItems.ROAD_TAB, new NormalSlabBlock(Properties.create(Material.IRON).sound(SoundType.STONE))),
 		ASPHALT_SLOPEBOT = add("asphalt_slopebot", OmniItems.ROAD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), slopebotShape)),
 		ASPHALT_SLOPEBOT_LINED = add("asphalt_slopebot_lined", OmniItems.ROAD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), slopebotShape)),
 		ASPHALT_SLOPETOP	= add("asphalt_slopetop", OmniItems.ROAD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), slopetopShape)),
@@ -510,6 +594,7 @@ public final class OmniBlocks
 		FASTFOOD_SERVING1 = add("fastfood_serving1", OmniItems.FOOD_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
 		FASTFOOD_SERVING2 = add("fastfood_serving2", OmniItems.FOOD_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
 		FASTFOOD_SERVING3 = add("fastfood_serving3", OmniItems.FOOD_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
+		
 		ICEBUCKET = add("icebucket", OmniItems.FOOD_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), Block.makeCuboidShape(2.25d, 0d, 8.75d, 14.25d, 5d, 14.25d))),
 		PREPARATION_BREAKFAST = add("preparation_breakfast", OmniItems.FOOD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
 		PREPARATION_STEAK = add("preparation_steak", OmniItems.FOOD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
@@ -519,6 +604,22 @@ public final class OmniBlocks
 		SUSHI_SERVING3 = add("sushi_serving3", OmniItems.FOOD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SCAFFOLDING), foodShape)),
 		WINEBOTTLES = add("winebottles", OmniItems.FOOD_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), Block.makeCuboidShape(5d, 0d, 8d, 11.5d, 9d, 13d))),
 		
+		// PLANTS
+		BASKET_GOLDAPPLE = add("basket_goldapple", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_GREENAPPLE = add("basket_greenapple", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_ORANGE = add("basket_orange", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_PLUM = add("basket_plum", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BASKET_REDAPPLE = add("basket_apple", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		BUSH_BLOCK = add("bush_block", OmniItems.PLANTS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.CROP))),
+		BUSH_SLAB = add("bush_slab", OmniItems.PLANTS_TAB, new NormalSlabBlock(Properties.create(Material.IRON).sound(SoundType.CROP))),
+		FRUIT_GOLDAPPLE = add("fruit_goldapple", OmniItems.PLANTS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_GREENAPPLE = add("fruit_greenapple", OmniItems.PLANTS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_ORANGE = add("fruit_orange", OmniItems.PLANTS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_PLUM = add("fruit_plum", OmniItems.PLANTS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		FRUIT_REDAPPLE = add("fruit_redapple", OmniItems.PLANTS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
+		SMALL_RED_SHROOM = add("small_red_shroom", OmniItems.PLANTS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING))),
+		SMALL_BROWN_SHROOM = add("small_brown_shroom", OmniItems.PLANTS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING))),
+		
 		// MISC		
 		
 		BABY_BOY = add("baby_boy", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.CORAL), babyShape)),
@@ -527,13 +628,7 @@ public final class OmniBlocks
 		BABY_GIRL_2 = add("baby_girl_2", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.CORAL), babyShape)),
 		BABY_BOY_3 = add("baby_boy_3", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.CORAL), babyShape)),
 		BABY_GIRL_3 = add("baby_girl_3", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.CORAL), babyShape)),
-		
-		BASKET_GOLDAPPLE = add("basket_goldapple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		BASKET_GREENAPPLE = add("basket_greenapple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		BASKET_ORANGE = add("basket_orange", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		BASKET_PLUM = add("basket_plum", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		BASKET_REDAPPLE = add("basket_apple", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		
+			
 		BILLIARD_BLACK = add("billiard_black", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), billiardShape)),
 		BILLIARD_LIGHT_BLUE = add("billiard_light_blue", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), billiardShape)),
 		BILLIARD_LIME = add("billiard_lime", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), billiardShape)),
@@ -544,19 +639,9 @@ public final class OmniBlocks
 		BILLIARD_ORANGE = add("billiard_orange", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.STONE), billiardShape)),
 		
 		CART_WHEEL = add("cart_wheel", OmniItems.OTHERS_TAB, new CartWheelBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		
-		FRUIT_GOLDAPPLE = add("fruit_goldapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		FRUIT_GREENAPPLE = add("fruit_greenapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		FRUIT_ORANGE = add("fruit_orange", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		FRUIT_PLUM = add("fruit_plum", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		FRUIT_REDAPPLE = add("fruit_redapple", OmniItems.OTHERS_TAB, new HeadRotationBlock(Properties.create(Material.IRON).sound(SoundType.WOOD))),
-		
-		
-		
 		SANDCASTLE = add("sandcastle", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SAND), Block.makeCuboidShape(0d, 0d, 0d, 16d, 13d, 16d))),
-		SANDCASTLE_WHITE = add("sandcastle_white", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SAND), Block.makeCuboidShape(0d, 0d, 0d, 16d, 13d, 16d))),
-		SMALL_RED_SHROOM = add("small_red_shroom", OmniItems.OTHERS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING))),
-		SMALL_BROWN_SHROOM = add("small_brown_shroom", OmniItems.OTHERS_TAB, new ShroomBlock(Properties.create(Material.IRON).sound(SoundType.BAMBOO_SAPLING)));
+		SANDCASTLE_WHITE = add("sandcastle_white", OmniItems.OTHERS_TAB, new HorizontalRotationBlock(Properties.create(Material.IRON).sound(SoundType.SAND), Block.makeCuboidShape(0d, 0d, 0d, 16d, 13d, 16d)));
+		
 					
 
 	public static void register(RegistryEvent.Register<Block> event)

@@ -1,0 +1,6 @@
+{
+	"parent": "omniheads:block/base/stairs",
+	"textures": {
+		"0": "block/stone"
+	}
+}

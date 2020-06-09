@@ -1,0 +1,9 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/slab_top",
+    "textures": {
+        "bottom": "omniheads:block/bush",
+        "top": "omniheads:block/bush",
+        "side": "omniheads:block/bush"
+    }
+}

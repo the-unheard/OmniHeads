@@ -28,34 +28,15 @@ public class TallSeatBlock extends TallHRBlock
 	 
 	public TallSeatBlock(Properties props, VoxelShape northShape, VoxelShape upperShape, Vec3d shift)
 	{
-		super(props, northShape);
+		super(props, northShape, upperShape);
 		this.shift = shift;
-		shapes.put(Direction.NORTH, upperShape);
-		shapes.put(Direction.EAST, rotateShape(Direction.NORTH, Direction.EAST, upperShape));
-		shapes.put(Direction.SOUTH, rotateShape(Direction.NORTH, Direction.SOUTH, upperShape));
-		shapes.put(Direction.WEST, rotateShape(Direction.NORTH, Direction.WEST, upperShape));
 	}
 
 	public TallSeatBlock(Properties props)
 	{
 		super(props);
 		this.shift = new Vec3d(0.5d, 0.5d, 0.5d);
-		shapes.put(Direction.NORTH, VoxelShapes.fullCube());
-		shapes.put(Direction.EAST, VoxelShapes.fullCube());
-		shapes.put(Direction.SOUTH, VoxelShapes.fullCube());
-		shapes.put(Direction.WEST, VoxelShapes.fullCube());
 	}
-	
-	@Override
-	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext ctx)
-	{
-		if(state.get(BlockStateProperties.DOUBLE_BLOCK_HALF) == DoubleBlockHalf.UPPER)
-		{
-			return this.shapes.getOrDefault(state.get(BlockStateProperties.HORIZONTAL_FACING), VoxelShapes.fullCube());
-		}
-		return super.getShape(state, world, pos, ctx);
-	}
-
 
 	@Override
 	public boolean onBlockActivated(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockRayTraceResult hit)

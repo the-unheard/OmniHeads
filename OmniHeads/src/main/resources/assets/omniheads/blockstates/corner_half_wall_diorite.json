@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/corner_half_wall_diorite" },
+		"facing=east":  { "model": "omniheads:block/corner_half_wall_diorite", "y": 90 },
+		"facing=south": { "model": "omniheads:block/corner_half_wall_diorite", "y": 180 },
+		"facing=west":  { "model": "omniheads:block/corner_half_wall_diorite", "y": 270 }
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"variants":
+	{
+		"facing=north": { "model": "omniheads:block/concrete_ceiling_lgray" },
+		"facing=east": { "model": "omniheads:block/concrete_ceiling_lgray", "y": 90 },
+		"facing=south": { "model": "omniheads:block/concrete_ceiling_lgray", "y": 180 },
+		"facing=west": { "model": "omniheads:block/concrete_ceiling_lgray", "y": 270 }
+	}
+}
