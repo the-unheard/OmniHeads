@@ -3,10 +3,10 @@ loaderVersion="[28,)"
 
 [[mods]]
 modId="omniheads"
-version="1.12.2"
+version="1.13"
 displayName="OmniHeads"
 authors="Omnisentient"
 description='''
 Adds head-like blocks to reduce tile entity count
-Adds almost 100 unique blocks, with count of color variation not included
+Adds almost 100 unique blocks not counting the color variations
 '''

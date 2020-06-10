@@ -108,6 +108,7 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.CLOSET_BOX_WHITE, model -> new MultilayerBakedModel(model, selector)); 
 		addBlockOverride(OmniBlocks.CLOSET_TOWELS_BLACK, model -> new MultilayerBakedModel(model, selector)); 
 		addBlockOverride(OmniBlocks.CLOSET_TOWELS_WHITE, model -> new MultilayerBakedModel(model, selector)); 
+		addBlockOverride(OmniBlocks.SLIDING_DOOR, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCE_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCE_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCEB_BLACK, model -> new MultilayerBakedModel(model, selector));
