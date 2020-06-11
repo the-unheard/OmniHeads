@@ -16,6 +16,9 @@ public final class OmniDelegates
 	{
 		Block oldBlock = oldState.getBlock();
 		Block newBlock = newState.getBlock();
+		
+		System.out.println(oldBlock + ", " + newBlock);
+		
 		if(oldBlock instanceof SlidingDoorBlock && oldBlock == newBlock && oldState.get(BlockStateProperties.OPEN) != newState.get(BlockStateProperties.OPEN))
 			((DoorTileEntity) world.getTileEntity(pos)).toggle();
 	}
