@@ -29,8 +29,9 @@ public class SlidingDoorRenderer<T extends TileEntity & IAnimatedDoor> extends T
 		BlockRendererDispatcher dispatch = Minecraft.getInstance().getBlockRendererDispatcher();
 		World world = te.getWorld();
 		BlockPos pos = te.getPos();
-		// IEnviromentBlockReader reader = MinecraftForgeClient.getRegionRenderCache(world, pos);
-		BlockState state = world.getBlockState(pos); // = reader.getBlockState(pos);
+		BlockState state = world.getBlockState(pos);
+		if(!state.has(BlockStateProperties.HORIZONTAL_FACING) || !state.has(BlockStateProperties.DOOR_HINGE) || !state.has(BlockStateProperties.OPEN))
+			return;
 		IBakedModel model = dispatch.getModelForState(state);
 		Direction facing = state.get(BlockStateProperties.HORIZONTAL_FACING);
 		Vec3i tr = (state.get(BlockStateProperties.DOOR_HINGE) == DoorHingeSide.LEFT != state.get(BlockStateProperties.OPEN) ? facing.rotateYCCW() : facing.rotateY()).getDirectionVec();
