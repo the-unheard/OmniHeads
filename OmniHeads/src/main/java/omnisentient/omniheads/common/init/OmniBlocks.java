@@ -20,20 +20,18 @@ import omnisentient.omniheads.common.block.CartWheelBlock;
 import omnisentient.omniheads.common.block.CctvBlock;
 import omnisentient.omniheads.common.block.DoubleHRBlock;
 import omnisentient.omniheads.common.block.DoubleSeatBlock;
-import omnisentient.omniheads.common.block.NormalDoorBlock;
-import omnisentient.omniheads.common.block.NormalGrassBlock;
-import omnisentient.omniheads.common.block.NormalSlabBlock;
 import omnisentient.omniheads.common.block.GlassTableBlock;
 import omnisentient.omniheads.common.block.HeadRotationBlock;
 import omnisentient.omniheads.common.block.HorizontalRotationBlock;
+import omnisentient.omniheads.common.block.NormalDoorBlock;
+import omnisentient.omniheads.common.block.NormalSlabBlock;
 import omnisentient.omniheads.common.block.SeatBlock;
 import omnisentient.omniheads.common.block.ShroomBlock;
+import omnisentient.omniheads.common.block.SlidingDoorBlock;
 import omnisentient.omniheads.common.block.TallHRBlock;
 import omnisentient.omniheads.common.block.TallSeatBlock;
 import omnisentient.omniheads.common.block.ToggleableHRBlock;
-import omnisentient.omniheads.common.block.SlidingDoorBlock;
 import omnisentient.omniheads.common.block.TranslucentHRBlock;
-import omnisentient.omniheads.common.block.TranslucentSeatBlock;
 import omnisentient.omniheads.common.block.WateredHRBlock;
 
 public final class OmniBlocks
@@ -439,7 +437,7 @@ public final class OmniBlocks
 		MODERNDOOR5B = add("moderndoor5b", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.GLASS))),
 		MODERNDOOR6 = add("moderndoor6", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
 		MODERNDOOR6B = add("moderndoor6b", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
-		SLIDING_DOOR = add("sliding_door", OmniItems.FIXTURES_TAB, new NormalDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
+		SLIDING_DOOR = add("sliding_door", OmniItems.FIXTURES_TAB, new SlidingDoorBlock(Properties.create(Material.WOOD).sound(SoundType.STONE))),
 		STAIRGLASSFENCE_BLACK = add("stairglassfence_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCE_WHITE = add("stairglassfence_white", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),
 		STAIRGLASSFENCEB_BLACK = add("stairglassfenceb_black", OmniItems.FIXTURES_TAB, new TranslucentHRBlock(Properties.create(Material.IRON).sound(SoundType.GLASS), thinwallShape)),

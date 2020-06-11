@@ -10,37 +10,28 @@ import com.google.common.collect.Lists;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.SoundType;
-import net.minecraft.block.Block.Properties;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.BlockModelShapes;
-import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.client.renderer.color.IItemColor;
-import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.client.renderer.model.BakedQuad;
 import net.minecraft.client.renderer.model.IBakedModel;
 import net.minecraft.client.renderer.model.ModelResourceLocation;
-import net.minecraft.item.BlockItem;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.GrassColors;
-import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.client.event.ModelBakeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import omnisentient.omniheads.OmniHeads;
 import omnisentient.omniheads.client.model.BrightnessBakedModel;
 import omnisentient.omniheads.client.model.MultilayerBakedModel;
-import omnisentient.omniheads.client.render.EmptyRenderer;
-import omnisentient.omniheads.common.block.TranslucentHRBlock;
+import omnisentient.omniheads.client.render.entity.EmptyRenderer;
+import omnisentient.omniheads.client.render.tileentity.SlidingDoorRenderer;
 import omnisentient.omniheads.common.entity.SeatEntity;
 import omnisentient.omniheads.common.init.OmniBlocks;
-import omnisentient.omniheads.common.init.OmniItems;
+import omnisentient.omniheads.common.tileentity.DoorTileEntity;
 
 @Mod.EventBusSubscriber(modid = OmniHeads.ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class OmniClientModEvents
@@ -108,7 +99,6 @@ public class OmniClientModEvents
 		addBlockOverride(OmniBlocks.CLOSET_BOX_WHITE, model -> new MultilayerBakedModel(model, selector)); 
 		addBlockOverride(OmniBlocks.CLOSET_TOWELS_BLACK, model -> new MultilayerBakedModel(model, selector)); 
 		addBlockOverride(OmniBlocks.CLOSET_TOWELS_WHITE, model -> new MultilayerBakedModel(model, selector)); 
-		addBlockOverride(OmniBlocks.SLIDING_DOOR, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCE_BLACK, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCE_WHITE, model -> new MultilayerBakedModel(model, selector));
 		addBlockOverride(OmniBlocks.STAIRGLASSFENCEB_BLACK, model -> new MultilayerBakedModel(model, selector));
@@ -172,6 +162,8 @@ public class OmniClientModEvents
 		addFullOverride(OmniBlocks.TABLE_DININGC_GLASS, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.TABLE_DININGC_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
 		addFullOverride(OmniBlocks.WATERDISPENSER_WHITE, model -> new BrightnessBakedModel(model, quad -> quad.getTintIndex() == -2));
+
+		ClientRegistry.bindTileEntitySpecialRenderer(DoorTileEntity.class, new SlidingDoorRenderer());
 	}
 
 	@SubscribeEvent
