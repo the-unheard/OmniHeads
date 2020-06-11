@@ -12,7 +12,7 @@ public final class OmniDelegates
 {
 	private OmniDelegates() {}
 
-	public static void onBlockUpdate(World world, BlockPos pos, BlockState oldState, BlockState newState, int flags)
+	public static void onBlockUpdate(World world, BlockPos pos, BlockState oldState, BlockState newState)
 	{
 		Block oldBlock = oldState.getBlock();
 		Block newBlock = newState.getBlock();
