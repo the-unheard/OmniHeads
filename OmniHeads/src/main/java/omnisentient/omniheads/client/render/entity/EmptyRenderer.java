@@ -1,4 +1,4 @@
-package omnisentient.omniheads.client.render;
+package omnisentient.omniheads.client.render.entity;
 
 import net.minecraft.client.renderer.culling.ICamera;
 import net.minecraft.client.renderer.entity.EntityRenderer;
