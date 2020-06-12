@@ -32,7 +32,9 @@ public class GlassTableBlock extends TranslucentHRBlock
 		if ((adjacentBlock == OmniBlocks.TABLE_TOP_GLASS) || (adjacentBlock == OmniBlocks.TABLE_DINING_GLASS )  || (adjacentBlock == OmniBlocks.TABLE_DININGB_GLASS )  || (adjacentBlock == OmniBlocks.TABLE_DININGC_GLASS )) {
 			return true;
 		}
+
 		return super.isSideInvisible(state, adjacentBlockState, side);
+		
 	}
 
 }

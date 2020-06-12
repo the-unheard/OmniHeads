@@ -8,10 +8,12 @@ import net.minecraft.state.properties.DoorHingeSide;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.Direction;
+import net.minecraft.util.SoundEvent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
+import omnisentient.omniheads.common.init.OmniSounds;
 import omnisentient.omniheads.common.tileentity.DoorTileEntity;
 
 public class SlidingDoorBlock extends DoorBlock
@@ -77,4 +79,13 @@ public class SlidingDoorBlock extends DoorBlock
 	{
 		return new DoorTileEntity();
 	}
+
+	protected SoundEvent getCloseSound() {
+		return OmniSounds.SLIDING_DOOR_CLOSE;
+	}
+
+	protected SoundEvent getOpenSound() {
+		return OmniSounds.SLIDING_DOOR_OPEN;
+	}
+
 }

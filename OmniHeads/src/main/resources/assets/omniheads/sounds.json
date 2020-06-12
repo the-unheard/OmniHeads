@@ -1,0 +1,20 @@
+{
+	"block.sliding_door.open":
+	{
+		"category": "block",
+		"subtitle": "block.sliding_door.open",
+		"sounds": [{
+			"name": "omniheads:block/sliding_door/open",
+			"stream": true
+		}]
+	},
+	"block.sliding_door.close":
+	{
+		"category": "block",
+		"subtitle": "block.sliding_door.close",
+		"sounds": [{
+			"name": "omniheads:block/sliding_door/close",
+			"stream": true
+		}]
+	}
+}

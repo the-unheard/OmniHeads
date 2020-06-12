@@ -8,11 +8,11 @@
 	"elements": [
 		{
 			"name": "glass",
-			"from": [-0.25, 0, 11.75],
-			"to": [15.75, 16, 12.25],
-			"rotation": {"angle": 0, "axis": "y", "origin": [6.75, 9.25, 19.5]},
+			"from": [0, 0, 11.75],
+			"to": [16, 16, 12.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 9.25, 19.5]},
 			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1"},
+				"north": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#1", "cullface": "north"},
 				"south": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#1"}
 			}
 		}

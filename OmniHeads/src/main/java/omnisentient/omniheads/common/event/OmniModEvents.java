@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraft.util.SoundEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -11,12 +12,18 @@ import omnisentient.omniheads.OmniHeads;
 import omnisentient.omniheads.common.init.OmniBlocks;
 import omnisentient.omniheads.common.init.OmniEntityTypes;
 import omnisentient.omniheads.common.init.OmniItems;
+import omnisentient.omniheads.common.init.OmniSounds;
 import omnisentient.omniheads.common.init.OmniTileEntityTypes;
 
 @Mod.EventBusSubscriber(modid = OmniHeads.ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class OmniModEvents
 {
 	private OmniModEvents() {}
+	
+	@SubscribeEvent
+	public static void registerSound(RegistryEvent.Register<SoundEvent> event) 	{
+		OmniSounds.register(event);
+	}
 
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event)
@@ -41,4 +48,6 @@ public final class OmniModEvents
 	{
 		OmniTileEntityTypes.register(event);
 	}
+	
+	
 }
